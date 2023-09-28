@@ -2,10 +2,37 @@ body {
     font-family: 'Avenir Next', sans-serif;
     font-weight: 700;
 }
-
-/* COMMIT THIS TO MEMORY YOU WILL ALWAYS USE THIS */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+@keyframes nav-active {
+    0% { 
+        border-bottom: 0px solid white;
+    }
+    100% {
+        border-bottom: 7px solid white;
+    }
+  }
+  @keyframes text-hoverstate {
+    0% { 
+        font-weight: 400;
+    }
+    100% {
+        font-weight: 600;
+    }
+  }
+  .main-page__bio-page {
+   animation: nav-active 2s infinite;
+   
+   &:hover {
+    animation: text-hoverstate 2s infinite;
+   }
+  }
+  /* .main-page__shows-page {
+    animation: nav-active 2s infinite;
+  } */
+ 
+ 

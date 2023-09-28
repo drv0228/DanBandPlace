@@ -19,5 +19,7 @@ ul {
 }
 .main-page__shows-page {
   @extend .main-page__bio-page;
-  font-weight: 400,
+  font-weight: 400;
+  color: $primarycolor;
 }
+
