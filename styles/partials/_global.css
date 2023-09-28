@@ -1,0 +1,11 @@
+body {
+    font-family: 'Avenir Next', sans-serif;
+    font-weight: 700;
+}
+
+/* COMMIT THIS TO MEMORY YOU WILL ALWAYS USE THIS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}

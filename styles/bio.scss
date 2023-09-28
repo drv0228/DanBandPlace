@@ -1,3 +1,23 @@
 @use './partials/variables' as *;
 @use './partials/mixins' as *;
 
+.nav-bar {
+    background-color: $bandsite-black;
+    padding-right: 7rem;
+}
+.nav-bar__logo {
+    margin: 2rem 6rem 1rem 6rem;
+}
+ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+}
+.main-page__bio-page {
+    color: white;
+    padding: 0rem 4rem 1rem 2rem;
+}
+.main-page__shows-page {
+  @extend .main-page__bio-page;
+  font-weight: 400,
+}

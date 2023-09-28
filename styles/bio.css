@@ -1,1 +1,23 @@
-/*# sourceMappingURL=bio.css.map */
+.nav-bar {
+  background-color: #323232;
+  padding-right: 7rem;
+}
+
+.nav-bar__logo {
+  margin: 2rem 6rem 1rem 6rem;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-page__bio-page, .main-page__shows-page {
+  color: white;
+  padding: 0rem 4rem 1rem 2rem;
+}
+
+.main-page__shows-page {
+  font-weight: 400;
+}/*# sourceMappingURL=bio.css.map */
