@@ -3,23 +3,29 @@
 
 .nav-bar {
     background-color: $bandsite-black;
-    padding-right: 7rem;
 }
 .nav-bar__logo {
-    margin: 2rem 6rem 1rem 6rem;
+    height: 3rem;
+    width: 100%;
+    margin: 2rem 0;
 }
+
 ul {
     list-style-type: none;
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 .main-page__bio-page {
     color: white;
-    padding: 0rem 4rem 1rem 2rem;
+    text-align: center;
+    width: 50%;
+    padding-bottom: 1rem;
 }
 .main-page__shows-page {
-  @extend .main-page__bio-page;
+  text-align: center;
   font-weight: 400;
+  width: 50%;
   color: $primarycolor;
 }
 
