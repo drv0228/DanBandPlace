@@ -1,31 +1,47 @@
-body {
-    font-family: 'Avenir Next', sans-serif;
-    font-weight: 700;
-    font-size: 30px;
-}
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+body {
+    font-family: 'Avenir Next', sans-serif;
+    font-size: 30px;
+}
+@font-face {
+    font-family: 'Avenir';
+    src: url(../../assets/Font/AvenirNextLTPro-Regular.otf) format('opentype');
+    font-weight: 400;
+}
+@font-face {          
+    font-family: 'Avenir';
+    src: url(../../assets/Font/AvenirNextLTPro-Demi.otf) format('opentype');
+    font-weight: 600;
+}
+@font-face {
+    font-family: 'Avenir';
+    src: url(../../assets/Font/AvenirNextLTPro-Bold.otf) format('opentype');
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'Avenir';
+    src: url(../../assets/Font/AlternativeFiles/AvenirNextLTPro.ttf) format('truetype');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'Avenir';
+    src: url(../../assets/Font/AlternativeFiles/AvenirNextLTProDemi.ttf) format('truetype');
+    font-weight: 600;
+}
+@font-face {
+    font-family: 'Avenir';
+    src: url(../../assets/Font/AlternativeFiles/AvenirNextLTProBold.ttf) format('truetype');
+    font-weight: 700;
+}
 
-  @keyframes text-hoverstate {
-    0% { 
-        font-weight: 400;
-    }
-    100% {
-        font-weight: 600;
-    }
-  }
-  .main-page__bio-page {
-    border-bottom: 7px solid white;
-   
-   &:hover {
-    animation: text-hoverstate 2s infinite;
-   }
-  }
-  /* .main-page__shows-page {
-    animation: nav-active 2s infinite;
-  } */
- 
- 
+
+
+
+
+
+
+

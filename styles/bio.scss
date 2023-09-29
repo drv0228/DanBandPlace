@@ -2,30 +2,127 @@
 @use './partials/mixins' as *;
 
 .nav-bar {
-    background-color: $bandsite-black;
+    background-color: $primary-black;
+    &__logo {
+        height: 3rem;
+        width: 100%;
+        margin: 2rem 0;
+    }
+    &__list {
+        list-style-type: none;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    &__bio-page {
+        color: $primary-white;
+        font-weight: 700;
+        text-align: center;
+        width: 50%;
+        padding-bottom: 1rem;
+        border-bottom: 7px solid $primary-white;
+        &:hover {
+            font-weight: 400;
+            font-weight: normal;
+           }
+    }
+    &__shows-page {
+        text-align: center;
+        font-weight: 400;
+        width: 50%;
+        color: $primary-silver;
+        &:hover {
+          font-weight: 400;
+          font-style: normal;
+         }
+      }
 }
-.nav-bar__logo {
-    height: 3rem;
-    width: 100%;
-    margin: 2rem 0;
+.main-page {
+    &__hero {
+        height: 60vw;
+        overflow: hidden;
+        background-image: url('../assets/Images/hero-bio.jpg');
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+
+    }
+    &__heading {
+        color: $primary-white;
+        padding: 3rem;
+        margin-left: 5vw;
+        letter-spacing: 0.2rem;
+        font-size: 50px;
+        font-weight: 600;
+    }
+    &__description {
+       display: flex;
+       flex-direction: column;
+    }
+    &__image {
+        width: 90%;
+        margin: 3vw 0vw 3vw 5vw;
+    }
+    &__about--heading {
+        font-size: 52px;
+        font-weight: 600;
+        color: $primary-black;
+        letter-spacing: 0.1rem;
+        margin: 3rem 2rem 0rem 2rem;
+    }
+    &__description--band-article {
+        margin: 5vw 2vw 6vw 3vw;
+        padding: 1vw;
+    }
+    &__description--band-frase {
+        margin: 1vw 5vw 9vw 5vw;
+        font-size: 30px;
+        font-weight: 600;
+        color: $primary-black;
+        line-height: 7vw;
+        letter-spacing: .02vw;
+        &--frase-author {
+            margin: 3vw 0vw 0vw 0vw;
+        }
+    }
+    &__description--heading-article {
+        font-weight: 500;
+        margin-bottom: 4vw;
+        letter-spacing: .03vw;
+     }
+    &__description--article {
+        margin-bottom: 5vw;
+        letter-spacing: .05vw;
+    }
+    &__photo-gallery {
+        background-color: $secondary-silver;
+    }
+    &__photo-gallery img {
+        weight: 65vw;
+        height: 40vh;
+        margin: 2vw 3vw;
+    }
+    &__photo-gallery > p {
+        font-size: 58px;
+        font-weight: 500;
+        padding: 7vw 3vw 2vw 3vw;
+    }
+}
+.footer {
+    background-color: $primary-black;
+    display: flex;
+    flex-direction: column;
+    & > div {
+        color: $primary-white;
+        padding: 2vw;
+    }
+    &-logo {
+        width: 50%;
+        padding: 0;
+    }
 }
 
-ul {
-    list-style-type: none;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-.main-page__bio-page {
-    color: white;
-    text-align: center;
-    width: 50%;
-    padding-bottom: 1rem;
-}
-.main-page__shows-page {
-  text-align: center;
-  font-weight: 400;
-  width: 50%;
-  color: $primarycolor;
-}
+
+
 

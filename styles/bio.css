@@ -1,30 +1,120 @@
 .nav-bar {
   background-color: #323232;
 }
-
 .nav-bar__logo {
   height: 3rem;
   width: 100%;
   margin: 2rem 0;
 }
-
-ul {
+.nav-bar__list {
   list-style-type: none;
   width: 100%;
   display: flex;
   justify-content: center;
 }
-
-.main-page__bio-page {
-  color: white;
+.nav-bar__bio-page {
+  color: #FFFFFF;
+  font-weight: 700;
   text-align: center;
   width: 50%;
   padding-bottom: 1rem;
+  border-bottom: 7px solid #FFFFFF;
 }
-
-.main-page__shows-page {
+.nav-bar__bio-page:hover {
+  font-weight: 400;
+  font-weight: normal;
+}
+.nav-bar__shows-page {
   text-align: center;
   font-weight: 400;
   width: 50%;
-  color: #E1E1E1;
+  color: #AFAFAF;
+}
+.nav-bar__shows-page:hover {
+  font-weight: 400;
+  font-style: normal;
+}
+
+.main-page__hero {
+  height: 60vw;
+  overflow: hidden;
+  background-image: url("../assets/Images/hero-bio.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+}
+.main-page__heading {
+  color: #FFFFFF;
+  padding: 3rem;
+  margin-left: 5vw;
+  letter-spacing: 0.2rem;
+  font-size: 50px;
+  font-weight: 600;
+}
+.main-page__description {
+  display: flex;
+  flex-direction: column;
+}
+.main-page__image {
+  width: 90%;
+  margin: 3vw 0vw 3vw 5vw;
+}
+.main-page__about--heading {
+  font-size: 52px;
+  font-weight: 600;
+  color: #323232;
+  letter-spacing: 0.1rem;
+  margin: 3rem 2rem 0rem 2rem;
+}
+.main-page__description--band-article {
+  margin: 5vw 2vw 6vw 3vw;
+  padding: 1vw;
+}
+.main-page__description--band-frase {
+  margin: 1vw 5vw 9vw 5vw;
+  font-size: 30px;
+  font-weight: 600;
+  color: #323232;
+  line-height: 7vw;
+  letter-spacing: 0.02vw;
+}
+.main-page__description--band-frase--frase-author {
+  margin: 3vw 0vw 0vw 0vw;
+}
+.main-page__description--heading-article {
+  font-weight: 500;
+  margin-bottom: 4vw;
+  letter-spacing: 0.03vw;
+}
+.main-page__description--article {
+  margin-bottom: 5vw;
+  letter-spacing: 0.05vw;
+}
+.main-page__photo-gallery {
+  background-color: #E1E1E1;
+}
+.main-page__photo-gallery img {
+  weight: 65vw;
+  height: 40vh;
+  margin: 2vw 3vw;
+}
+.main-page__photo-gallery > p {
+  font-size: 58px;
+  font-weight: 500;
+  padding: 7vw 3vw 2vw 3vw;
+}
+
+.footer {
+  background-color: #323232;
+  display: flex;
+  flex-direction: column;
+}
+.footer > div {
+  color: #FFFFFF;
+  padding: 2vw;
+}
+.footer-logo {
+  width: 50%;
+  padding: 0;
 }/*# sourceMappingURL=bio.css.map */
