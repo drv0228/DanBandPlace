@@ -1,150 +1,146 @@
-@use './partials/variables' as *;
-@use './partials/mixins' as *;
+@use "./partials/variables" as *;
+@use "./partials/mixins" as *;
 
 .nav-bar {
-    background-color: $primary-black;
-    &__logo {
-        height: 2rem;
-        width: 100%;
-        margin: 1rem 0;
+  background-color: $primary-black;
+  &__logo {
+    height: 2rem;
+    width: 100%;
+    margin: 1rem 0;
+  }
+  &__list {
+    list-style-type: none;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  &__bio-page {
+    color: $primary-white;
+    font-weight: 600;
+    text-align: center;
+    width: 50%;
+    padding-bottom: 1rem;
+    border-bottom: 3px solid $primary-white;
+    &:hover {
+      font-weight: 400;
+      font-weight: normal;
     }
-    &__list {
-        list-style-type: none;
-        width: 100%;
-        display: flex;
-        justify-content: center;
+  }
+  &__shows-page {
+    text-align: center;
+    font-weight: 400;
+    width: 50%;
+    color: $primary-silver;
+    &:hover {
+      font-weight: 400;
+      font-style: normal;
     }
-    &__bio-page {
-        color: $primary-white;
-        font-weight: 600;
-        text-align: center;
-        width: 50%;
-        padding-bottom: 1rem;
-        border-bottom: 3px solid $primary-white;
-        &:hover {
-            font-weight: 400;
-            font-weight: normal;
-           }
-    }
-    &__shows-page {
-        text-align: center;
-        font-weight: 400;
-        width: 50%;
-        color: $primary-silver;
-        &:hover {
-          font-weight: 400;
-          font-style: normal;
-         }
-      }
+  }
 }
 .main-page {
-    &__hero {
-        height: 60vw;
-        overflow: hidden;
-        background-image: url('../assets/Images/hero-bio.jpg');
-        background-size: cover;
-        background-position: center;
-        display: flex;
-        align-items: center;
-        &--overlay {
-            width: 100%;
-            height: 100%;
-            background-color: rgba(50,50,50, 0.4);
-        }
+  &__hero {
+    height: 60vw;
+    overflow: hidden;
+    background-image: url("../assets/Images/hero-bio.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    &--overlay {
+      width: 100%;
+      height: 100%;
+      background-color: rgba(50, 50, 50, 0.4);
     }
-    &__heading {
-        color: $primary-white;
-        padding: 25vw 0vw 0vw 3vw;
-        margin-left: 2vw;
-        font-size: 1.5rem;
-        font-weight: 600;
-    }
-    &__description {
-       display: flex;
-       flex-direction: column;
-       &--band-article {
-        margin: 5vw 2vw 6vw 3vw;
-        padding: 1vw;
-       }
-       &--band-frase {
-        margin: 0vw 5vw 3vw 5vw;
-        font-size: 0.875rem;
-        font-weight: 600;
-        color: $primary-black;
-        line-height: 7vw;
-        letter-spacing: .02vw;
-        }
-        &--frase-author {
-            margin: 3vw 0vw 0vw 0vw;
-        }
-        &--heading-article {
-            color: $secondary-black;
-            margin-bottom: 4vw;
-            letter-spacing: .03vw;
-         }
-         &--article {
-            color: $primary-black;
-            font-size: 0.82rem;
-            letter-spacing: .09vw;
-            line-height: 7vw;
-        }
-    }
-    &__about--heading {
-        font-size: 23px;
-        font-weight: 600;
-        color: $primary-black;
-        letter-spacing: 0.05rem;
-        margin: 7vw 5vw 0vw 5vw;
-    }
-    &__image {
-        width: 90%;
-        margin: 3vw 0vw 3vw 5vw;
-    }
-    &__photo-gallery {
-        background-color: $secondary-white;
-        padding-bottom: 3vw;
-    }
-    &__photo-gallery img {
-       @extend .main-page__image;
-       margin-bottom: 0vw;
-    }
-    &__photo-gallery > p {
-        font-size: 28px;
-        font-weight: 500;
-        padding: 7vw 3vw 2vw 5vw;
-    }
-}
-.footer {
-    background-color: $primary-black;
+  }
+  &__heading {
+    color: $primary-white;
+    padding: 25vw 0vw 0vw 3vw;
+    margin-left: 2vw;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  &__description {
     display: flex;
     flex-direction: column;
-    padding: 5vw 4vw;
-    &__message {
-        font-size: 23px;
-        font-weight: 700;
-        letter-spacing: 0.1rem;
+    &--band-article {
+      margin: 5vw 2vw 6vw 3vw;
+      padding: 1vw;
     }
-    & > div {
-        color: $secondary-white;
-        font-size: 13px;
-        letter-spacing: 0.01rem;
-        padding: 3vw;
+    &--band-frase {
+      margin: 0vw 5vw 3vw 5vw;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: $primary-black;
+      line-height: 7vw;
+      letter-spacing: 0.02vw;
     }
-    &__icons > img {
-       margin-right: 11vw;
+    &--frase-author {
+      margin: 3vw 0vw 0vw 0vw;
     }
-    &__names {
-       font-weight: 600;
+    &--heading-article {
+      color: $secondary-black;
+      margin-bottom: 4vw;
+      letter-spacing: 0.03vw;
     }
-    &-logo {
-        width: 42%;
-        margin-top: 13vw;
+    &--article {
+      color: $primary-black;
+      font-size: 0.82rem;
+      letter-spacing: 0.09vw;
+      line-height: 7vw;
     }
-    &__copyright {
-        font-size: 10.5px;
-    }
+  }
+  &__about--heading {
+    font-size: 23px;
+    font-weight: 600;
+    color: $primary-black;
+    letter-spacing: 0.05rem;
+    margin: 7vw 5vw 0vw 5vw;
+  }
+  &__image {
+    width: 90%;
+    margin: 3vw 0vw 3vw 5vw;
+  }
+  &__photo-gallery {
+    background-color: $secondary-white;
+    padding-bottom: 3vw;
+  }
+  &__photo-gallery img {
+    @extend .main-page__image;
+    margin-bottom: 0vw;
+  }
+  &__photo-gallery > p {
+    font-size: 28px;
+    font-weight: 500;
+    padding: 7vw 3vw 2vw 5vw;
+  }
 }
-
-
-
-
+.footer {
+  background-color: $primary-black;
+  display: flex;
+  flex-direction: column;
+  padding: 5vw 4vw;
+  &__message {
+    font-size: 23px;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+  }
+  & > div {
+    color: $secondary-white;
+    font-size: 13px;
+    letter-spacing: 0.01rem;
+    padding: 3vw;
+  }
+  &__icons > img {
+    margin-right: 11vw;
+  }
+  &__names {
+    font-weight: 600;
+  }
+  &-logo {
+    width: 42%;
+    margin-top: 13vw;
+  }
+  &__copyright {
+    font-size: 10.5px;
+  }
+}
