@@ -12,8 +12,8 @@
     width: 100%;
     margin: 1rem 0;
     @include tablet {
-        width: 55%;
-        margin: 2vw 5vw; 
+      width: 55%;
+      margin: 2vw 5vw;
     }
   }
   &__list {
@@ -22,9 +22,9 @@
     display: flex;
     justify-content: center;
     @include tablet {
-       justify-content: left;
-       margin-left: 2vw;
-      }
+      justify-content: left;
+      margin-left: 2vw;
+    }
   }
   &__bio-page {
     color: $primary-white;
@@ -38,11 +38,11 @@
       font-weight: normal;
     }
     @include tablet {
-        width: 100%;
-        border-bottom: 2px solid $primary-white;
-        font-size: 12px;
-        padding-bottom: 3.3vw;
-      }
+      width: 100%;
+      border-bottom: 2px solid $primary-white;
+      font-size: 12px;
+      padding-bottom: 3.3vw;
+    }
   }
   &__shows-page {
     text-align: center;
@@ -54,9 +54,9 @@
       font-style: normal;
     }
     @include tablet {
-        width: 20%;
-        font-size: 12px;
-      }
+      width: 20%;
+      font-size: 12px;
+    }
   }
 }
 .main-page {
@@ -77,8 +77,8 @@
       }
     }
     @include tablet {
-        height: 53vw;
-      }
+      height: 53vw;
+    }
   }
   &__heading {
     color: $primary-white;
@@ -87,9 +87,9 @@
     font-size: 1.5rem;
     font-weight: 600;
     @include tablet {
-        font-size: 3.1rem;
-        letter-spacing: 0.1rem;
-      }
+      font-size: 3.1rem;
+      letter-spacing: 0.1rem;
+    }
   }
   &__description {
     display: flex;
@@ -97,28 +97,57 @@
     &--band-article {
       margin: 5vw 2vw 6vw 3vw;
       padding: 1vw;
+      @include tablet {
+        margin-bottom: 2vw;
+      }
     }
     &--band-frase {
-      margin: 0vw 5vw 3vw 5vw;
       font-size: 0.875rem;
+      letter-spacing: 0.02vw;
+      line-height: 7vw;
       font-weight: 600;
       color: $primary-black;
-      line-height: 7vw;
-      letter-spacing: 0.02vw;
+      margin: 0vw 5vw 3vw 5vw;
+      @include tablet {
+        font-size: 1.3rem;
+        line-height: 3.8vw;
+        margin: 0vw 15vw;
+      }
     }
     &--frase-author {
       margin: 3vw 0vw 0vw 0vw;
+      @include tablet {
+        font-size: 0.9rem;
+        margin-top: 1.1vw;
+      }
     }
     &--heading-article {
       color: $secondary-black;
-      margin-bottom: 4vw;
+      font-weight: 600;
       letter-spacing: 0.03vw;
+      margin-bottom: 4vw;
+      @include tablet {
+        font-size: 1.5rem;
+        margin: 0vw 11vw;
+      }
     }
     &--article {
       color: $primary-black;
       font-size: 0.82rem;
       letter-spacing: 0.09vw;
       line-height: 7vw;
+      @include tablet {
+        font-size: 0.8rem;
+        letter-spacing: 0vw;
+        line-height: 2.5vw;
+        padding: 0vw 2vw 0vw 0vw;
+      }
+    }
+    &--container {
+      @include tablet {
+        display: flex;
+        margin: 2vw 11vw 0vw 11vw;
+      }
     }
   }
   &__about--heading {
@@ -127,13 +156,17 @@
     color: $primary-black;
     letter-spacing: 0.05rem;
     margin: 7vw 5vw 0vw 5vw;
+    @include tablet {
+      font-size: 33px;
+      margin-top: 5vw;
+    }
   }
   &__image {
     width: 90%;
     margin: 3vw 0vw 3vw 5vw;
     @include tablet {
-        width: 70%;
-       
+      width: 70%;
+      margin: 3vw 0vw 4vw 15vw;
     }
   }
   &__photo-gallery {
@@ -143,11 +176,25 @@
   &__photo-gallery img {
     @extend .main-page__image;
     margin-bottom: 0vw;
+    @include tablet {
+      width: 25%;
+      margin: 2vw 0vw 1vw 6.5vw;
+    }
   }
   &__photo-gallery > p {
     font-size: 28px;
     font-weight: 500;
     padding: 7vw 3vw 2vw 5vw;
+    @include tablet {
+      font-size: 30px;
+      font-weight: 600;
+    }
+  }
+  &__photo-gallery--container {
+    @include tablet {
+      display: flex;
+      flex-wrap: wrap;
+    }
   }
 }
 .footer {
@@ -155,28 +202,94 @@
   display: flex;
   flex-direction: column;
   padding: 5vw 4vw;
+  @include tablet {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 3vw 4vw 12vw 4vw;
+    position: relative;
+  }
   &__message {
     font-size: 23px;
     font-weight: 700;
     letter-spacing: 0.1rem;
+    @include tablet {
+      font-size: 30px;
+      font-weight: 600;
+      letter-spacing: 0.15rem;
+    }
   }
   & > div {
     color: $secondary-white;
     font-size: 13px;
     letter-spacing: 0.01rem;
     padding: 3vw;
+    @include tablet {
+      font-size: 11px;
+      letter-spacing: 0.02rem;
+      padding: 2vw;
+    }
   }
   &__icons > img {
     margin-right: 11vw;
+    @include tablet {
+      margin-right: 3vw;
+      padding-top: 1.5vw;
+    }
+  }
+  &__icons {
+    @include tablet {
+      margin-right: 20vw;
+    }
+  }
+  &__info {
+    @include tablet {
+      display: flex;
+    }
+    &--container {
+      @include tablet {
+        margin-left: 3vw;
+      }
+      &--separate {
+        @include tablet {
+          margin-left: 4vw;
+        }
+      }
+    }
   }
   &__names {
     font-weight: 600;
+    @include tablet {
+      color: $primary-white;
+      font-size: 13px;
+      font-weight: 400;
+      margin-right: 3vw;
+      margin-bottom: 3vw;
+    }
+  }
+  &__emails {
+    @include tablet {
+      margin-top: 3vw;
+    }
   }
   &-logo {
     width: 42%;
     margin-top: 13vw;
+    @include tablet {
+      width: 13%;
+      margin-top: 0vw;
+      position: absolute;
+      left: 77vw;
+      top: 5vw;
+    }
   }
   &__copyright {
     font-size: 10.5px;
+    @include tablet {
+      font-size: 13px;
+      position: absolute;
+      left: 0vw;
+      bottom: 6vw;
+      padding-left: 6vw;
+    }
   }
 }
