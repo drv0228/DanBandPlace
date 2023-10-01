@@ -4,8 +4,7 @@
     box-sizing: border-box;
 }
 body {
-    font-family: 'Avenir Next', sans-serif;
-    font-size: 30px;
+    font-family: 'Avenir Next';
 }
 @font-face {
     font-family: 'Avenir';
