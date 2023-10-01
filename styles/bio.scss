@@ -38,7 +38,7 @@
       font-weight: normal;
     }
     @include tablet {
-      width: 100%;
+      width: 8%;
       border-bottom: 2px solid $primary-white;
       font-size: 12px;
       padding-bottom: 3.3vw;
@@ -258,17 +258,26 @@
   }
   &__names {
     font-weight: 600;
+    margin-top: 5vw;
     @include tablet {
       color: $primary-white;
       font-size: 13px;
       font-weight: 400;
+      margin-top: 0vw;
       margin-right: 3vw;
       margin-bottom: 3vw;
     }
   }
-  &__emails {
+  &__details {
+    margin-top: 3vw;
     @include tablet {
-      margin-top: 3vw;
+      margin-top: 0vw;
+    }
+  }
+  &__emails {
+    margin-top: 3vw;
+    @include tablet {
+      // margin-top: 3vw;
     }
   }
   &-logo {

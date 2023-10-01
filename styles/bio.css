@@ -44,7 +44,7 @@
 }
 @media (min-width: 768px) {
   .nav-bar__bio-page {
-    width: 100%;
+    width: 8%;
     border-bottom: 2px solid #FFFFFF;
     font-size: 12px;
     padding-bottom: 3.3vw;
@@ -297,20 +297,28 @@
 }
 .footer__names {
   font-weight: 600;
+  margin-top: 5vw;
 }
 @media (min-width: 768px) {
   .footer__names {
     color: #FFFFFF;
     font-size: 13px;
     font-weight: 400;
+    margin-top: 0vw;
     margin-right: 3vw;
     margin-bottom: 3vw;
   }
 }
+.footer__details {
+  margin-top: 3vw;
+}
 @media (min-width: 768px) {
-  .footer__emails {
-    margin-top: 3vw;
+  .footer__details {
+    margin-top: 0vw;
   }
+}
+.footer__emails {
+  margin-top: 3vw;
 }
 .footer-logo {
   width: 42%;
