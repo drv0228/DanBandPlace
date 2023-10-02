@@ -15,6 +15,9 @@
       width: 55%;
       margin: 2vw 5vw;
     }
+    @include desktop {
+      margin-left: 10vw;
+    }
   }
   &__list {
     list-style-type: none;
@@ -24,6 +27,9 @@
     @include tablet {
       justify-content: left;
       margin-left: 2vw;
+    }
+    @include desktop {
+      margin-left: 4vw;
     }
   }
   &__bio-page {
@@ -43,12 +49,16 @@
       font-size: 12px;
       padding-bottom: 3.3vw;
     }
+    @include desktop {
+      font-size: 16px;
+      padding-bottom: 2.5vw;
+    }
   }
   &__shows-page {
-    text-align: center;
-    font-weight: 400;
-    width: 50%;
     color: $primary-silver;
+    font-weight: 400;
+    text-align: center;
+    width: 50%;
     &:hover {
       font-weight: 400;
       font-style: normal;
@@ -56,6 +66,12 @@
     @include tablet {
       width: 20%;
       font-size: 12px;
+    }
+    @include desktop {
+      font-size: 16px;
+      text-align: left;
+      padding-left: 2.5vw;
+      padding-bottom: 2.5vw;
     }
   }
 }
@@ -89,6 +105,11 @@
     @include tablet {
       font-size: 3.1rem;
       letter-spacing: 0.1rem;
+    }
+    @include desktop {
+      font-size: 3.5rem;
+      margin-left: 8vw;
+      padding-top: 18.6vw;
     }
   }
   &__description {

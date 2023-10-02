@@ -18,6 +18,11 @@
     margin: 2vw 5vw;
   }
 }
+@media (min-width: 1280px) {
+  .nav-bar__logo {
+    margin-left: 10vw;
+  }
+}
 .nav-bar__list {
   list-style-type: none;
   width: 100%;
@@ -28,6 +33,11 @@
   .nav-bar__list {
     justify-content: left;
     margin-left: 2vw;
+  }
+}
+@media (min-width: 1280px) {
+  .nav-bar__list {
+    margin-left: 4vw;
   }
 }
 .nav-bar__bio-page {
@@ -50,11 +60,17 @@
     padding-bottom: 3.3vw;
   }
 }
+@media (min-width: 1280px) {
+  .nav-bar__bio-page {
+    font-size: 16px;
+    padding-bottom: 2.5vw;
+  }
+}
 .nav-bar__shows-page {
-  text-align: center;
-  font-weight: 400;
-  width: 50%;
   color: #AFAFAF;
+  font-weight: 400;
+  text-align: center;
+  width: 50%;
 }
 .nav-bar__shows-page:hover {
   font-weight: 400;
@@ -64,6 +80,14 @@
   .nav-bar__shows-page {
     width: 20%;
     font-size: 12px;
+  }
+}
+@media (min-width: 1280px) {
+  .nav-bar__shows-page {
+    font-size: 16px;
+    text-align: left;
+    padding-left: 2.5vw;
+    padding-bottom: 2.5vw;
   }
 }
 
@@ -102,6 +126,13 @@
   .main-page__heading {
     font-size: 3.1rem;
     letter-spacing: 0.1rem;
+  }
+}
+@media (min-width: 1280px) {
+  .main-page__heading {
+    font-size: 3.5rem;
+    margin-left: 8vw;
+    padding-top: 18.6vw;
   }
 }
 .main-page__description {
