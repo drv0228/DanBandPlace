@@ -87,7 +87,7 @@ body {
 }
 @media (min-width: 1280px) {
   .nav-bar__bio-page {
-    font-size: 16px;
+    font-size: 1.2rem;
     padding-bottom: 2.5vw;
   }
 }
@@ -104,7 +104,7 @@ body {
 @media (min-width: 768px) {
   .nav-bar__shows-page {
     width: 20%;
-    font-size: 12px;
+    font-size: 1rem;
   }
 }
 @media (min-width: 1280px) {
@@ -181,13 +181,13 @@ body {
   }
 }
 .footer__message {
-  font-size: 23px;
+  font-size: 1.5rem;
   font-weight: 700;
   letter-spacing: 0.1rem;
 }
 @media (min-width: 768px) {
   .footer__message {
-    font-size: 30px;
+    font-size: 2.8rem;
     font-weight: 600;
     letter-spacing: 0.15rem;
   }
@@ -200,13 +200,13 @@ body {
 }
 .footer > div {
   color: #FAFAFA;
-  font-size: 13px;
+  font-size: 1rem;
   letter-spacing: 0.01rem;
   padding: 3vw;
 }
 @media (min-width: 768px) {
   .footer > div {
-    font-size: 11px;
+    font-size: 1.2rem;
     letter-spacing: 0.02rem;
     padding: 2vw;
   }
@@ -258,7 +258,7 @@ body {
 @media (min-width: 768px) {
   .footer__names {
     color: #FFFFFF;
-    font-size: 13px;
+    font-size: 1rem;
     font-weight: 400;
     margin-top: 0vw;
     margin-right: 3vw;
@@ -313,11 +313,11 @@ body {
   }
 }
 .footer__copyright {
-  font-size: 10.5px;
+  font-size: 1rem;
 }
 @media (min-width: 768px) {
   .footer__copyright {
-    font-size: 13px;
+    font-size: 1.5rem;
     position: absolute;
     left: 0vw;
     bottom: 6vw;

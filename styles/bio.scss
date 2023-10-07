@@ -47,11 +47,11 @@
     @include tablet {
       width: 8%;
       border-bottom: 2px solid $primary-white;
-      font-size: 12px;
+      font-size: 1rem;
       padding-bottom: 3.3vw;
     }
     @include desktop {
-      font-size: 16px;
+      font-size: 1.2rem;
       padding-bottom: 2.5vw;
     }
   }
@@ -66,10 +66,10 @@
     }
     @include tablet {
       width: 20%;
-      font-size: 12px;
+      font-size: 1rem;
     }
     @include desktop {
-      font-size: 16px;
+      font-size: 1.2rem;
       text-align: left;
       padding-left: 2.5vw;
       padding-bottom: 2.5vw;
@@ -190,13 +190,13 @@
     }
   }
   &__about--heading {
-    font-size: 23px;
+    font-size: 1.5rem;
     font-weight: 600;
     color: $primary-black;
     letter-spacing: 0.05rem;
     margin: 7vw 5vw 0vw 5vw;
     @include tablet {
-      font-size: 33px;
+      font-size: 2rem;
       margin-top: 5vw;
     }
     @include desktop {
@@ -234,11 +234,11 @@
     }
   }
   &__photo-gallery > p {
-    font-size: 28px;
+    font-size: 1.5rem;
     font-weight: 500;
     padding: 7vw 3vw 2vw 5vw;
     @include tablet {
-      font-size: 30px;
+      font-size: 2.8rem;
       font-weight: 600;
     }
     @include desktop {
@@ -255,6 +255,48 @@
     }
   }
 }
+.form {
+border-bottom: 1px solid $primary-silver;
+padding: 3vw;
+margin: 3vw;
+&__heading {
+  font-size: 0.5rem;
+  margin-bottom: 3vw;
+  
+}
+&__content {
+  display: flex;
+  flex-direction: column;
+}
+
+&__name {
+  display: flex;
+}
+
+&__input-container {
+  display: flex;
+  flex-direction: column;
+}
+
+&__image {
+  width: 5vw;
+  height: 5vw;
+  border-radius: 50%;
+  @include tablet {
+    // width: 9vw;
+    margin: 3vw 0vw 4vw 15vw;
+  }
+  @include desktop {
+    // width: 60vw;
+    // height: 50vh;
+    margin: 3vw 0vw 2vw 20vw;
+  }
+  }
+}
+
+.comments {
+  background-color: white;
+}
 .footer {
   background-color: $primary-black;
   display: flex;
@@ -270,11 +312,11 @@
     padding: 1vw 8vw 5vw 8vw;
   }
   &__message {
-    font-size: 23px;
+    font-size: 1.5rem;
     font-weight: 700;
     letter-spacing: 0.1rem;
     @include tablet {
-      font-size: 30px;
+      font-size: 2.8rem;
       font-weight: 600;
       letter-spacing: 0.15rem;
     }
@@ -285,11 +327,11 @@
   }
   & > div {
     color: $secondary-white;
-    font-size: 13px;
+    font-size: 1rem;
     letter-spacing: 0.01rem;
     padding: 3vw;
     @include tablet {
-      font-size: 11px;
+      font-size: 1.2rem;
       letter-spacing: 0.02rem;
       padding: 2vw;
     }
@@ -333,7 +375,7 @@
     margin-top: 5vw;
     @include tablet {
       color: $primary-white;
-      font-size: 13px;
+      font-size: 1rem;
       font-weight: 400;
       margin-top: 0vw;
       margin-right: 3vw;
@@ -376,9 +418,9 @@
     }
   }
   &__copyright {
-    font-size: 10.5px;
+    font-size: 1rem;
     @include tablet {
-      font-size: 13px;
+      font-size: 1.5rem;
       position: absolute;
       left: 0vw;
       bottom: 6vw;
