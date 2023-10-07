@@ -119,7 +119,7 @@ body {
 .main-page__hero {
   height: 40vw;
   overflow: hidden;
-  background-image: url("../assets/Images/hero-bio.jpg");
+  background-image: url("../assets/Images/Photo-gallery-3.jpg");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -158,184 +158,6 @@ body {
     font-size: 3.5rem;
     margin-left: 8vw;
     padding-top: 18.6vw;
-  }
-}
-.main-page__description {
-  display: flex;
-  flex-direction: column;
-}
-.main-page__description--band-article {
-  margin: 5vw 2vw 6vw 3vw;
-  padding: 1vw;
-}
-@media (min-width: 768px) {
-  .main-page__description--band-article {
-    margin-bottom: 2vw;
-  }
-}
-@media (min-width: 1280px) {
-  .main-page__description--band-article {
-    margin: 2vw 2vw 1vw 3vw;
-  }
-}
-.main-page__description--band-frase {
-  font-size: 0.875rem;
-  letter-spacing: 0.02vw;
-  line-height: 7vw;
-  font-weight: 600;
-  color: #323232;
-  margin: 0vw 5vw 3vw 5vw;
-}
-@media (min-width: 768px) {
-  .main-page__description--band-frase {
-    font-size: 1.3rem;
-    line-height: 3.8vw;
-    margin: 0vw 15vw;
-  }
-}
-@media (min-width: 1280px) {
-  .main-page__description--band-frase {
-    font-size: 1.2rem;
-    line-height: 2.1vw;
-    margin: 0vw 34vw 0vw 20vw;
-  }
-}
-.main-page__description--frase-author {
-  margin: 3vw 0vw 0vw 0vw;
-}
-@media (min-width: 768px) {
-  .main-page__description--frase-author {
-    font-size: 0.9rem;
-    margin-top: 1.1vw;
-  }
-}
-.main-page__description--heading-article {
-  color: #000000;
-  font-weight: 600;
-  letter-spacing: 0.03vw;
-  margin-bottom: 4vw;
-}
-@media (min-width: 768px) {
-  .main-page__description--heading-article {
-    font-size: 1.5rem;
-    margin: 0vw 11vw;
-  }
-}
-@media (min-width: 1280px) {
-  .main-page__description--heading-article {
-    margin-left: 16vw;
-  }
-}
-.main-page__description--article {
-  color: #323232;
-  font-size: 0.82rem;
-  letter-spacing: 0.09vw;
-  line-height: 7vw;
-}
-@media (min-width: 768px) {
-  .main-page__description--article {
-    font-size: 0.8rem;
-    letter-spacing: 0vw;
-    line-height: 2.5vw;
-    padding: 0vw 2vw 0vw 0vw;
-  }
-}
-@media (min-width: 1280px) {
-  .main-page__description--article {
-    line-height: 1.5vw;
-  }
-}
-@media (min-width: 768px) {
-  .main-page__description--container {
-    display: flex;
-    margin: 2vw 11vw 0vw 11vw;
-  }
-}
-@media (min-width: 1280px) {
-  .main-page__description--container {
-    margin: 2vw 16vw 0vw 15vw;
-  }
-}
-.main-page__about--heading {
-  font-size: 23px;
-  font-weight: 600;
-  color: #323232;
-  letter-spacing: 0.05rem;
-  margin: 7vw 5vw 0vw 5vw;
-}
-@media (min-width: 768px) {
-  .main-page__about--heading {
-    font-size: 33px;
-    margin-top: 5vw;
-  }
-}
-@media (min-width: 1280px) {
-  .main-page__about--heading {
-    margin: 3vw 5vw 0vw 11vw;
-  }
-}
-.main-page__image, .main-page__photo-gallery img {
-  width: 90%;
-  margin: 3vw 0vw 3vw 5vw;
-}
-@media (min-width: 768px) {
-  .main-page__image, .main-page__photo-gallery img {
-    width: 70%;
-    margin: 3vw 0vw 4vw 15vw;
-  }
-}
-@media (min-width: 1280px) {
-  .main-page__image, .main-page__photo-gallery img {
-    width: 60vw;
-    height: 50vh;
-    margin: 3vw 0vw 2vw 20vw;
-  }
-}
-.main-page__photo-gallery {
-  background-color: #FAFAFA;
-  padding-bottom: 3vw;
-}
-.main-page__photo-gallery img {
-  margin-bottom: 0vw;
-}
-@media (min-width: 768px) {
-  .main-page__photo-gallery img {
-    width: 25%;
-    margin: 2vw 0vw 1vw 6.5vw;
-  }
-}
-@media (min-width: 1280px) {
-  .main-page__photo-gallery img {
-    width: 25vw;
-    height: 20vh;
-    margin: 1vw;
-  }
-}
-.main-page__photo-gallery > p {
-  font-size: 28px;
-  font-weight: 500;
-  padding: 7vw 3vw 2vw 5vw;
-}
-@media (min-width: 768px) {
-  .main-page__photo-gallery > p {
-    font-size: 30px;
-    font-weight: 600;
-  }
-}
-@media (min-width: 1280px) {
-  .main-page__photo-gallery > p {
-    padding: 3vw 9vw 2vw 10vw;
-  }
-}
-@media (min-width: 768px) {
-  .main-page__photo-gallery--container {
-    display: flex;
-    flex-wrap: wrap;
-  }
-}
-@media (min-width: 1280px) {
-  .main-page__photo-gallery--container {
-    padding: 0vw 9vw;
   }
 }
 
@@ -508,4 +330,4 @@ body {
     left: 4vw;
     bottom: 2vw;
   }
-}/*# sourceMappingURL=bio.css.map */
+}/*# sourceMappingURL=shows.css.map */

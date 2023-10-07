@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/bio.css">
+    <script src="./scripts/index-page.js" defer></script>
     <title>Document</title>
 </head>
 
@@ -81,6 +82,26 @@
                 <img src="./assets/Images/Photo-gallery-8.jpg" alt="gallery-photo">
                 <img src="./assets/Images/Photo-gallery-9.jpg" alt="gallery-photo">
             </div>
+        </section>
+        <form class="form">
+            <div class="form__input-container">
+                <label class="form__content-label" for="userName">
+                    NAME
+                </label>
+                <input required class="form__content-box" name="userName" type="text" placeholder="Enter your name">
+            </div>
+
+            <div class="form__input-container">
+                <label class="form__content-label" for="userComment">
+                    COMMENT
+                </label>
+                <input required class="form__content-box" name="userComment" type="text" placeholder="Add new comment">
+            </div>
+
+            <button class="form__button" type="submit">COMMENT</button>
+        </form>
+        <section class="comments">
+            <!-- JAVASCRIPT GOES HERE  -->
         </section>
     </main>
     <footer class="footer">
