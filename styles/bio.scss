@@ -9,7 +9,7 @@
     align-items: flex-end;
   }
   &__logo {
-    height: 2rem;
+    height: 0.5rem;
     width: 100%;
     margin: 1rem 0;
     @include tablet {
@@ -35,6 +35,7 @@
   }
   &__bio-page {
     color: $primary-white;
+    font-size: 0.5rem;
     font-weight: 600;
     text-align: center;
     width: 50%;
@@ -57,6 +58,7 @@
   }
   &__shows-page {
     color: $primary-silver;
+    font-size: 0.5rem;
     font-weight: 400;
     text-align: center;
     width: 50%;
@@ -79,6 +81,7 @@
 .main-page {
   &__hero {
     height: 40vw;
+    width: 100%;
     overflow: hidden;
     background-image: url("../assets/Images/hero-bio.jpg");
     background-size: cover;
@@ -101,7 +104,7 @@
     color: $primary-white;
     padding: 25vw 0vw 0vw 3vw;
     margin-left: 2vw;
-    font-size: 1.5rem;
+    font-size: 0.5rem;
     font-weight: 600;
     @include tablet {
       font-size: 3.1rem;
@@ -118,6 +121,8 @@
     flex-direction: column;
     &--band-article {
       margin: 5vw 2vw 6vw 3vw;
+      margin-top: 5vw;
+      margin-bottom: 6vw;
       padding: 1vw;
       @include tablet {
         margin-bottom: 2vw;
@@ -127,12 +132,14 @@
       }
     }
     &--band-frase {
-      font-size: 0.875rem;
+      font-size: 0.3rem;
       letter-spacing: 0.02vw;
-      line-height: 7vw;
+      line-height: 5vw;
       font-weight: 600;
       color: $primary-black;
       margin: 0vw 5vw 3vw 5vw;
+      margin-top: 0vw;
+      margin-bottom: 3vw;
       @include tablet {
         font-size: 1.3rem;
         line-height: 3.8vw;
@@ -153,6 +160,7 @@
     }
     &--heading-article {
       color: $secondary-black;
+      font-size: 0.5rem;
       font-weight: 600;
       letter-spacing: 0.03vw;
       margin-bottom: 4vw;
@@ -166,9 +174,9 @@
     }
     &--article {
       color: $primary-black;
-      font-size: 0.82rem;
-      letter-spacing: 0.09vw;
-      line-height: 7vw;
+      font-size: 0.3rem;
+      letter-spacing: 0.01vw;
+      line-height: 5vw;
       @include tablet {
         font-size: 0.8rem;
         letter-spacing: 0vw;
@@ -183,6 +191,8 @@
       @include tablet {
         display: flex;
         margin: 2vw 11vw 0vw 11vw;
+        margin-top: 2vw;
+        margin-bottom: 0vw;
       }
       @include desktop {
         margin: 2vw 16vw 0vw 15vw;
@@ -190,11 +200,13 @@
     }
   }
   &__about--heading {
-    font-size: 1.5rem;
+    font-size: .5rem;
     font-weight: 600;
     color: $primary-black;
     letter-spacing: 0.05rem;
     margin: 7vw 5vw 0vw 5vw;
+     margin-top: 7vw;
+      margin-bottom: 0vw;
     @include tablet {
       font-size: 2rem;
       margin-top: 5vw;
@@ -234,7 +246,7 @@
     }
   }
   &__photo-gallery > p {
-    font-size: 1.5rem;
+    font-size: .5rem;
     font-weight: 500;
     padding: 7vw 3vw 2vw 5vw;
     @include tablet {
@@ -255,48 +267,110 @@
     }
   }
 }
+
 .form {
-border-bottom: 1px solid $primary-silver;
-padding: 3vw;
-margin: 3vw;
+border-bottom: 1px solid $secondary-silver;
+padding: 2vw;
+margin: 5vw;
+width: 80%;
+// position: relative;
+// margin-top: 3vw;
+// margin-bottom: 3vw;
 &__heading {
-  font-size: 0.5rem;
-  margin-bottom: 3vw;
-  
+  font-size: 1rem;
+  font-weight: 700;
+  color: $primary-black;
+  letter-spacing: 0.1rem;
+  margin-bottom: 7vw;
 }
 &__content {
   display: flex;
   flex-direction: column;
+  position: relative;
 }
+&__container--grey {
+  position: absolute;
 
-&__name {
-  display: flex;
 }
+&__input-container {
+  position: relative;
+  left: 10vw;
+  bottom: 10vw;
+}
+// &__name {
+//   display: flex;
+//   width: 100%;
+// }
+&__content-label {
+  font-size: 0.5rem;
+  color: $primary-silver;
+  margin-top: 4vw;
+}
+&__content-box {
+  border: 1px solid $secondary-silver;
+  border-radius: 4px;
+  background-color: $secondary-white;
+  height: 5vw;
+  padding: 0.7rem;
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+  @include tablet {
+    height: 7vw;
+    padding: 1rem;
+  }
+}
+  &__button {
+    width: 76vw;
+    height: 5vw;
+    font-size: 0.5rem;
+    color: $primary-white;
+    background-color: $primary-black;
+    border-radius: 4px;
+    padding: 1vw 2vw;
+    margin-top: 2vw;
+  }
+  &__button:hover {
+    background-color: $secondary-black;
+  }
+
+
 
 &__input-container {
   display: flex;
   flex-direction: column;
 }
-
 &__image {
   width: 5vw;
   height: 5vw;
   border-radius: 50%;
   @include tablet {
-    // width: 9vw;
+    width: 6vw;
+    height: 6vw;
     margin: 3vw 0vw 4vw 15vw;
   }
   @include desktop {
-    // width: 60vw;
-    // height: 50vh;
+    width: 60vw;
+    height: 50vh;
     margin: 3vw 0vw 2vw 20vw;
   }
   }
+  &__container--grey {
+    background-color: $secondary-silver;
+  @extend .form__image,
+  }
+::placeholder {
+  color: $primary-black;
+  font-size: 0.7rem;
+}
 }
 
 .comments {
   background-color: white;
+  font-size: 0.7rem;
+  // border-top: 1px solid $secondary-silver;
+  // margin: 1vw 5vw;
 }
+
 .footer {
   background-color: $primary-black;
   display: flex;
@@ -312,7 +386,7 @@ margin: 3vw;
     padding: 1vw 8vw 5vw 8vw;
   }
   &__message {
-    font-size: 1.5rem;
+    font-size: .5rem;
     font-weight: 700;
     letter-spacing: 0.1rem;
     @include tablet {
@@ -327,9 +401,10 @@ margin: 3vw;
   }
   & > div {
     color: $secondary-white;
-    font-size: 1rem;
+    font-size: .5rem;
     letter-spacing: 0.01rem;
     padding: 3vw;
+    padding: 1vw;
     @include tablet {
       font-size: 1.2rem;
       letter-spacing: 0.02rem;
@@ -338,6 +413,7 @@ margin: 3vw;
   }
   &__icons > img {
     margin-right: 11vw;
+
     @include tablet {
       margin-right: 3vw;
       padding-top: 1.5vw;
@@ -418,7 +494,7 @@ margin: 3vw;
     }
   }
   &__copyright {
-    font-size: 1rem;
+    font-size: 0.3rem;
     @include tablet {
       font-size: 1.5rem;
       position: absolute;
