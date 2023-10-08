@@ -9,7 +9,7 @@
     align-items: flex-end;
   }
   &__logo {
-    height: 0.5rem;
+    height: 1.5rem;
     width: 100%;
     margin: 1rem 0;
     @include tablet {
@@ -35,7 +35,7 @@
   }
   &__bio-page {
     color: $primary-white;
-    font-size: 0.5rem;
+    font-size: 0.9rem;
     font-weight: 600;
     text-align: center;
     width: 50%;
@@ -58,7 +58,7 @@
   }
   &__shows-page {
     color: $primary-silver;
-    font-size: 0.5rem;
+    font-size: 0.9rem;
     font-weight: 400;
     text-align: center;
     width: 50%;
@@ -79,8 +79,9 @@
   }
 }
 .main-page {
+  position: relative;
   &__hero {
-    height: 40vw;
+    height: 60vw;
     width: 100%;
     overflow: hidden;
     background-image: url("../assets/Images/hero-bio.jpg");
@@ -102,9 +103,9 @@
   }
   &__heading {
     color: $primary-white;
-    padding: 25vw 0vw 0vw 3vw;
+    padding: 25vw 0vw 3vw 4vw;
     margin-left: 2vw;
-    font-size: 0.5rem;
+    font-size: 1.5rem;
     font-weight: 600;
     @include tablet {
       font-size: 3.1rem;
@@ -132,7 +133,7 @@
       }
     }
     &--band-frase {
-      font-size: 0.3rem;
+      font-size: 0.8rem;
       letter-spacing: 0.02vw;
       line-height: 5vw;
       font-weight: 600;
@@ -160,8 +161,8 @@
     }
     &--heading-article {
       color: $secondary-black;
-      font-size: 0.5rem;
-      font-weight: 600;
+      font-size: 1rem;
+      font-weight: 400;
       letter-spacing: 0.03vw;
       margin-bottom: 4vw;
       @include tablet {
@@ -174,7 +175,7 @@
     }
     &--article {
       color: $primary-black;
-      font-size: 0.3rem;
+      font-size: 0.79rem;
       letter-spacing: 0.01vw;
       line-height: 5vw;
       @include tablet {
@@ -186,6 +187,9 @@
       @include desktop {
         line-height: 1.5vw;
       }
+    }
+    &--article--secondary {
+      margin-top: 3vw;
     }
     &--container {
       @include tablet {
@@ -200,10 +204,10 @@
     }
   }
   &__about--heading {
-    font-size: .5rem;
-    font-weight: 600;
+    font-size: 1.2rem;
+    font-weight: 700;
     color: $primary-black;
-    letter-spacing: 0.05rem;
+    letter-spacing: 0.1rem;
     margin: 7vw 5vw 0vw 5vw;
      margin-top: 7vw;
       margin-bottom: 0vw;
@@ -246,8 +250,9 @@
     }
   }
   &__photo-gallery > p {
-    font-size: .5rem;
-    font-weight: 500;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
     padding: 7vw 3vw 2vw 5vw;
     @include tablet {
       font-size: 2.8rem;
@@ -271,31 +276,32 @@
 .form {
 border-bottom: 1px solid $secondary-silver;
 padding: 2vw;
-margin: 5vw;
+margin: 4vw;
 width: 80%;
 // position: relative;
 // margin-top: 3vw;
 // margin-bottom: 3vw;
 &__heading {
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 700;
   color: $primary-black;
   letter-spacing: 0.1rem;
-  margin-bottom: 7vw;
+  margin-bottom: 1vw;
+  @include tablet {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-top: 0;
+  }
 }
 &__content {
   display: flex;
   flex-direction: column;
   position: relative;
 }
-&__container--grey {
-  position: absolute;
-
-}
 &__input-container {
   position: relative;
   left: 10vw;
-  bottom: 10vw;
+  bottom: 0vw;
 }
 // &__name {
 //   display: flex;
@@ -305,6 +311,10 @@ width: 80%;
   font-size: 0.5rem;
   color: $primary-silver;
   margin-top: 4vw;
+  @include tablet {
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
 }
 &__content-box {
   border: 1px solid $secondary-silver;
@@ -314,40 +324,47 @@ width: 80%;
   padding: 0.7rem;
   margin-top: 0.3rem;
   margin-bottom: 0.3rem;
+  position: relative;
   @include tablet {
-    height: 7vw;
+    height: 6.5vw;
     padding: 1rem;
+  }
+}
+&__content-box--tablet {
+  @include tablet {
+    height: 13vw;
   }
 }
   &__button {
     width: 76vw;
-    height: 5vw;
+    height: 8vw;
     font-size: 0.5rem;
     color: $primary-white;
     background-color: $primary-black;
     border-radius: 4px;
-    padding: 1vw 2vw;
+    padding: 2vw;
     margin-top: 2vw;
+    @include tablet {
+      width: 22vw;
+      height: 5.5vw;
+      font-size: 1rem;
+      padding: 1vw;
+      position: relative;
+      left: 54vw;
+    }
   }
   &__button:hover {
     background-color: $secondary-black;
   }
-
-
-
 &__input-container {
   display: flex;
   flex-direction: column;
 }
 &__image {
-  width: 5vw;
-  height: 5vw;
+  width: 8vw;
+  height: 8vw;
   border-radius: 50%;
-  @include tablet {
-    width: 6vw;
-    height: 6vw;
-    margin: 3vw 0vw 4vw 15vw;
-  }
+  position: absolute;
   @include desktop {
     width: 60vw;
     height: 50vh;
@@ -356,19 +373,99 @@ width: 80%;
   }
   &__container--grey {
     background-color: $secondary-silver;
-  @extend .form__image,
+    position: absolute;
+    top: 8vw;
+  @extend .form__image;
+  @include tablet {
+    width: 6vw;
+    height: 6vw;
+    top:5vw;
   }
+  }
+
 ::placeholder {
   color: $primary-black;
   font-size: 0.7rem;
+  @include tablet {
+    font-size: 0.8rem;
+    letter-spacing: 0.07rem;
+    padding: 0vw;
+    position: absolute;
+    top: 2.5vw;
+  }
 }
 }
 
 .comments {
   background-color: white;
   font-size: 0.7rem;
+  @include tablet {
+    position: relative;
+  }
   // border-top: 1px solid $secondary-silver;
   // margin: 1vw 5vw;
+  // position: absolute
+  // @include tablet {
+  //   width: 100%;
+  // }
+  // bottom: 10vw;
+&__card {
+  width: 8vw;
+  height: 8vw;
+  border-radius: 50%;
+  background-color: $secondary-silver;
+  position: relative;
+  top: 23vw;
+  right: 2vw;
+  @include tablet {
+    width: 4vw;
+    height: 4vw;
+    // margin: 3vw 0vw 4vw 15vw;
+    position: absolute;
+    left: -5vw;
+  }
+  @include desktop {
+    width: 60vw;
+    height: 50vh;
+    margin: 3vw 0vw 2vw 20vw;
+  }
+}
+}
+.user__name {
+  font-size: 0.8rem;
+  font-weight: 600;
+  position: relative;
+  left: 9vw;
+  top: 13vw;
+  @include tablet {
+    top: 5vw;
+  }
+}
+.comments__date {
+  font-size: 0.8rem;
+  color: $primary-silver;
+  font-weight: 400;
+  position: relative;
+  left: 65vw;
+  top: 8vw;
+  width: 35%;
+  // @include tablet {
+  // // width: %;
+  // }
+  @include desktop {
+
+  }
+}
+.comments__description {
+  font-size: 0.79rem;
+  border-top: 1px solid $secondary-silver;
+  padding-top: 10vw;
+  position: relative;
+  left: 9vw;
+  @include tablet {
+    font-size: 0.9rem;
+    sp
+  }
 }
 
 .footer {
@@ -386,11 +483,12 @@ width: 80%;
     padding: 1vw 8vw 5vw 8vw;
   }
   &__message {
-    font-size: .5rem;
+    font-size: 1.5rem;
     font-weight: 700;
     letter-spacing: 0.1rem;
+    margin-bottom: 3vw;
     @include tablet {
-      font-size: 2.8rem;
+      // font-size: 1rem;
       font-weight: 600;
       letter-spacing: 0.15rem;
     }
@@ -401,12 +499,12 @@ width: 80%;
   }
   & > div {
     color: $secondary-white;
-    font-size: .5rem;
+    font-size: 0.65rem;
     letter-spacing: 0.01rem;
     padding: 3vw;
     padding: 1vw;
     @include tablet {
-      font-size: 1.2rem;
+      // font-size: 0.65rem;
       letter-spacing: 0.02rem;
       padding: 2vw;
     }
@@ -451,7 +549,7 @@ width: 80%;
     margin-top: 5vw;
     @include tablet {
       color: $primary-white;
-      font-size: 1rem;
+      font-size: 0.8rem;
       font-weight: 400;
       margin-top: 0vw;
       margin-right: 3vw;
@@ -494,9 +592,9 @@ width: 80%;
     }
   }
   &__copyright {
-    font-size: 0.3rem;
+    font-size: 0.65rem;
     @include tablet {
-      font-size: 1.5rem;
+      font-size: 0.8rem;
       position: absolute;
       left: 0vw;
       bottom: 6vw;

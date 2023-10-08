@@ -31,7 +31,7 @@ function displayComment(){
         container.appendChild(userComment);
 
         let userName = document.createElement('h2');
-        userName.classList.add('comments__user');
+        userName.classList.add('user__name');
         container.appendChild(userName);
 
         userName.innerText = usersComments[i].name;
