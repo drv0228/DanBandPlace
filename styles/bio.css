@@ -30,6 +30,7 @@ body {
   .nav-bar {
     display: flex;
     align-items: flex-end;
+    padding-top: 1vw;
   }
 }
 .nav-bar__logo {
@@ -39,8 +40,8 @@ body {
 }
 @media (min-width: 768px) {
   .nav-bar__logo {
-    width: 55%;
-    margin: 2vw 5vw;
+    width: 65%;
+    margin: 3vw 5vw;
   }
 }
 @media (min-width: 1280px) {
@@ -73,6 +74,7 @@ body {
   width: 50%;
   padding-bottom: 1rem;
   border-bottom: 3px solid #FFFFFF;
+  text-decoration: none;
 }
 .nav-bar__bio-page:hover {
   font-weight: 400;
@@ -80,10 +82,10 @@ body {
 }
 @media (min-width: 768px) {
   .nav-bar__bio-page {
-    width: 8%;
+    width: 13%;
     border-bottom: 2px solid #FFFFFF;
     font-size: 1rem;
-    padding-bottom: 3.3vw;
+    padding: 3vw 3vw 3vw 0vw;
   }
 }
 @media (min-width: 1280px) {
@@ -98,6 +100,7 @@ body {
   font-weight: 400;
   text-align: center;
   width: 50%;
+  text-decoration: none;
 }
 .nav-bar__shows-page:hover {
   font-weight: 400;
@@ -107,6 +110,7 @@ body {
   .nav-bar__shows-page {
     width: 20%;
     font-size: 1rem;
+    padding: 3vw 3vw 3vw 14vw;
   }
 }
 @media (min-width: 1280px) {
@@ -501,6 +505,11 @@ body {
   background-color: white;
   font-size: 0.7rem;
 }
+@media (min-width: 768px) {
+  .comments {
+    position: relative;
+  }
+}
 .comments__card {
   width: 8vw;
   height: 8vw;
@@ -514,7 +523,8 @@ body {
   .comments__card {
     width: 4vw;
     height: 4vw;
-    margin: 3vw 0vw 4vw 15vw;
+    position: absolute;
+    left: -5vw;
   }
 }
 @media (min-width: 1280px) {
@@ -531,6 +541,11 @@ body {
   position: relative;
   left: 9vw;
   top: 13vw;
+}
+@media (min-width: 768px) {
+  .user__name {
+    top: 5vw;
+  }
 }
 
 .comments__date {

@@ -5,44 +5,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/shows.css">
-    <script src="../scripts/build-shows-page.js" defer ></script>
+    <script src="../scripts/build-shows-page.js" defer></script>
     <title>Document</title>
 </head>
 
 <body>
     <header>
         <nav class="nav-bar">
-            <a href="./index.html"><img class="nav-bar__logo" src="./assets/Logo/Logo-bandsite.svg"
+            <a href="../index.html"><img class="nav-bar__logo" src="../assets/Logo/Logo-bandsite.svg"
                     alt="bandsite-logo"></a>
             <ul class="nav-bar__list">
-                <li class="nav-bar__bio-page">
-                    <p>Biography</p>
-                </li>
-                <li class="nav-bar__shows-page">Shows</li>
+                <a class="nav-bar__bio-page" href="../index.html">
+                    <li>
+                        <p>Biography</p>
+                    </li>
+                </a>
+                <a class="nav-bar__shows-page" href="./shows.html">
+                    <li>Shows</li>
+                </a>
             </ul>
         </nav>
     </header>
-    <main class="main-page">
-        <section class="main-page__hero">
-            <div class="main-page__hero--overlay">
-                <h1 class="main-page__heading">Beautiful Beasts Album</h1>
-                <iframe class="main-main__song" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/93524816&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+    <main class="shows-page">
+        <section class="shows-page__hero">
+            <div class="shows-page__hero--overlay">
+                <p class="shows-page__heading">Beautiful Beasts Album</p>
+                <h1 class="shows-page__main-heading">Queen of Yellow x For The Stings</h1>
+                <iframe class="main-main__song" allow="autoplay"
+                    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/93524816&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
             </div>
         </section>
-        <section class="main-page__description">
-            <p class="main-page__about--heading">Shows</p>
+        <section class="shows-page__description">
+            <p class="show-page__about--heading">Shows</p>
+            <div class="shows-page__about--heading"></div>
         </section>
-       
-         
     </main>
     <footer class="footer">
         <div>
             <p class="footer__message">Get In Touch</p>
         </div>
         <div class="footer__icons">
-            <img src="./assets/Icons/SVG/Icon-instagram.svg" alt="instagram">
-            <img src="./assets/Icons/SVG/Icon-facebook.svg" alt="facebook">
-            <img class="footer__icons--twitter" src="./assets/Icons/SVG/Icon-twitter.svg" alt="twitter">
+            <img src="../assets/Icons/SVG/Icon-instagram.svg" alt="instagram">
+            <img src="../assets/Icons/SVG/Icon-facebook.svg" alt="facebook">
+            <img class="footer__icons--twitter" src="../assets/Icons/SVG/Icon-twitter.svg" alt="twitter">
         </div>
         <div class="footer__info">
             <div>
@@ -86,7 +91,7 @@
             </div>
         </div>
         <div>
-            <img class="nav-bar__logo footer-logo" src="./assets/Logo/Logo-bandsite.svg" alt="bandsite-logo">
+            <img class="nav-bar__logo footer-logo" src="../assets/Logo/Logo-bandsite.svg" alt="bandsite-logo">
             <p class="footer__copyright">Copyright The Bees Knees © 2021 All Rights Reserved</p>
         </div>
     </footer>

@@ -9,7 +9,7 @@
     align-items: flex-end;
   }
   &__logo {
-    height: 2rem;
+    height: 1.2rem;
     width: 100%;
     margin: 1rem 0;
     @include tablet {
@@ -34,16 +34,11 @@
     }
   }
   &__bio-page {
-    color: $primary-white;
-    font-weight: 600;
+    color: $primary-silver;
+    font-weight: 400;
     text-align: center;
     width: 50%;
-    padding-bottom: 1rem;
-    border-bottom: 3px solid $primary-white;
-    &:hover {
-      font-weight: 400;
-      font-weight: normal;
-    }
+    text-decoration: none;
     @include tablet {
       width: 8%;
       border-bottom: 2px solid $primary-white;
@@ -56,10 +51,13 @@
     }
   }
   &__shows-page {
-    color: $primary-silver;
-    font-weight: 400;
+    color: $primary-white;
+    font-weight: 600;
     text-align: center;
     width: 50%;
+    padding-bottom: 1rem;
+    border-bottom: 3px solid $primary-white;
+    text-decoration: none;
     &:hover {
       font-weight: 400;
       font-style: normal;
@@ -76,19 +74,23 @@
     }
   }
 }
-.main-page {
+.shows-page {
   &__hero {
-    height: 40vw;
+    height: 45vh;
     overflow: hidden;
     background-image: url("../assets/Images/Photo-gallery-3.jpg");
     background-size: cover;
     background-position: center;
-    display: flex;
-    align-items: center;
+    margin-bottom: 10vw;
+    padding-bottom: 10vw;
     &--overlay {
-      width: 100%;
       height: 100%;
+      height: 45vh;
       background-color: rgba(50, 50, 50, 0.4);
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 10vw;
+      padding-bottom: 10vw;
       @include tablet {
         background-color: rgba(50, 50, 50, 0.5);
       }
@@ -99,10 +101,10 @@
   }
   &__heading {
     color: $primary-white;
-    padding: 25vw 0vw 0vw 3vw;
+    font-size: 1.2rem;
+    font-weight: 400;
+    padding: 10vw 0vw 0vw 3vw;
     margin-left: 2vw;
-    font-size: 1.5rem;
-    font-weight: 600;
     @include tablet {
       font-size: 3.1rem;
       letter-spacing: 0.1rem;
@@ -113,8 +115,70 @@
       padding-top: 18.6vw;
     }
   }
+  &__main-heading {
+    @extend .shows-page__heading;
+    font-size: 1.8rem;
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    //  margin-top: 5vw;
+  }
+  &__description {
+    margin: 5vw;
+    font-size: 1.8rem;
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+  }
+  &__about--heading {
+    @extend .shows-page__main-heading;
+  }
 }
-  
+.shows__labels {
+  @extend .shows-page__heading;
+  color: $primary-silver;
+  letter-spacing: 0rem;
+  font-weight: 600;
+  padding: 5vw 0vw 0vw 0vw;
+  margin-top: 5vw;
+  margin-left: 0vw;
+}
+.shows__date {
+  @extend .shows-page__heading;
+  color: $primary-black;
+  font-weight: 700;
+  padding: 5vw 0vw 0vw 0vw;
+  margin-left: 0vw;
+}
+.shows__venue,
+.shows__location {
+  @extend .shows__date;
+  font-weight: 600;
+}
+.shows__location {
+  margin-bottom: 8vw;
+}
+.button__tickets {
+  width: 100%;
+  color: $secondary-white;
+  background-color: $secondary-black;
+  border-radius: 3px;
+  font-weight: 400;
+  padding: 2vw;
+  margin-bottom: 3vw;
+}
+.shows__divider {
+  background-color: $secondary-silver;
+  margin-top: 3vw;
+  border-bottom: 1px solid $secondary-silver;
+  width: 100%;
+}
+.main-main__song {
+  width: 80%;
+  height: 30%;
+  border: 0px solid $primary-white;
+  border-radius: 4px;
+  margin: 8vw 0vw 0vw 10vw;
+}
+
 .footer {
   background-color: $primary-black;
   display: flex;
@@ -133,8 +197,8 @@
     font-size: 1.5rem;
     font-weight: 700;
     letter-spacing: 0.1rem;
+    margin-bottom: 3vw;
     @include tablet {
-      font-size: 2.8rem;
       font-weight: 600;
       letter-spacing: 0.15rem;
     }
@@ -145,17 +209,18 @@
   }
   & > div {
     color: $secondary-white;
-    font-size: 1rem;
+    font-size: 0.65rem;
     letter-spacing: 0.01rem;
     padding: 3vw;
+    padding: 1vw;
     @include tablet {
-      font-size: 1.2rem;
       letter-spacing: 0.02rem;
       padding: 2vw;
     }
   }
   &__icons > img {
     margin-right: 11vw;
+
     @include tablet {
       margin-right: 3vw;
       padding-top: 1.5vw;
@@ -193,7 +258,7 @@
     margin-top: 5vw;
     @include tablet {
       color: $primary-white;
-      font-size: 1rem;
+      font-size: 0.8rem;
       font-weight: 400;
       margin-top: 0vw;
       margin-right: 3vw;
@@ -236,9 +301,9 @@
     }
   }
   &__copyright {
-    font-size: 1rem;
+    font-size: 0.65rem;
     @include tablet {
-      font-size: 1.5rem;
+      font-size: 0.8rem;
       position: absolute;
       left: 0vw;
       bottom: 6vw;

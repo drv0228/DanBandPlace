@@ -7,14 +7,15 @@
   @include tablet {
     display: flex;
     align-items: flex-end;
+    padding-top: 1vw;
   }
   &__logo {
     height: 1.5rem;
     width: 100%;
     margin: 1rem 0;
     @include tablet {
-      width: 55%;
-      margin: 2vw 5vw;
+      width: 65%;
+      margin: 3vw 5vw;
     }
     @include desktop {
       margin-left: 10vw;
@@ -41,15 +42,16 @@
     width: 50%;
     padding-bottom: 1rem;
     border-bottom: 3px solid $primary-white;
+    text-decoration: none;
     &:hover {
       font-weight: 400;
       font-weight: normal;
     }
     @include tablet {
-      width: 8%;
+      width: 13%;
       border-bottom: 2px solid $primary-white;
       font-size: 1rem;
-      padding-bottom: 3.3vw;
+      padding: 3vw 3vw 3vw 0vw;
     }
     @include desktop {
       font-size: 1.2rem;
@@ -62,6 +64,7 @@
     font-weight: 400;
     text-align: center;
     width: 50%;
+    text-decoration: none;
     &:hover {
       font-weight: 400;
       font-style: normal;
@@ -69,6 +72,7 @@
     @include tablet {
       width: 20%;
       font-size: 1rem;
+      padding: 3vw 3vw 3vw 14vw;
     }
     @include desktop {
       font-size: 1.2rem;
@@ -303,10 +307,6 @@ width: 80%;
   left: 10vw;
   bottom: 0vw;
 }
-// &__name {
-//   display: flex;
-//   width: 100%;
-// }
 &__content-label {
   font-size: 0.5rem;
   color: $primary-silver;
@@ -395,20 +395,12 @@ width: 80%;
   }
 }
 }
-
 .comments {
   background-color: white;
   font-size: 0.7rem;
   @include tablet {
     position: relative;
   }
-  // border-top: 1px solid $secondary-silver;
-  // margin: 1vw 5vw;
-  // position: absolute
-  // @include tablet {
-  //   width: 100%;
-  // }
-  // bottom: 10vw;
 &__card {
   width: 8vw;
   height: 8vw;
@@ -420,7 +412,6 @@ width: 80%;
   @include tablet {
     width: 4vw;
     height: 4vw;
-    // margin: 3vw 0vw 4vw 15vw;
     position: absolute;
     left: -5vw;
   }
@@ -449,9 +440,6 @@ width: 80%;
   left: 65vw;
   top: 8vw;
   width: 35%;
-  // @include tablet {
-  // // width: %;
-  // }
   @include desktop {
 
   }
@@ -464,10 +452,8 @@ width: 80%;
   left: 9vw;
   @include tablet {
     font-size: 0.9rem;
-    sp
   }
 }
-
 .footer {
   background-color: $primary-black;
   display: flex;
@@ -488,7 +474,6 @@ width: 80%;
     letter-spacing: 0.1rem;
     margin-bottom: 3vw;
     @include tablet {
-      // font-size: 1rem;
       font-weight: 600;
       letter-spacing: 0.15rem;
     }
@@ -504,7 +489,6 @@ width: 80%;
     padding: 3vw;
     padding: 1vw;
     @include tablet {
-      // font-size: 0.65rem;
       letter-spacing: 0.02rem;
       padding: 2vw;
     }
