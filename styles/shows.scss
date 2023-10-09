@@ -7,14 +7,15 @@
   @include tablet {
     display: flex;
     align-items: flex-end;
+    padding-top: 1vw;
   }
   &__logo {
-    height: 1.2rem;
+    height: 1.5rem;
     width: 100%;
     margin: 1rem 0;
     @include tablet {
-      width: 55%;
-      margin: 2vw 5vw;
+      width: 65%;
+      margin: 3vw 5vw;
     }
     @include desktop {
       margin-left: 10vw;
@@ -35,15 +36,15 @@
   }
   &__bio-page {
     color: $primary-silver;
+    font-size: 0.9rem;
     font-weight: 400;
     text-align: center;
     width: 50%;
     text-decoration: none;
     @include tablet {
-      width: 8%;
-      border-bottom: 2px solid $primary-white;
-      font-size: 12px;
-      padding-bottom: 3.3vw;
+      width: 13%;
+      font-size: 0.9rem;
+      padding: 3vw 3vw 3vw 4vw;
     }
     @include desktop {
       font-size: 1.2rem;
@@ -63,8 +64,10 @@
       font-style: normal;
     }
     @include tablet {
-      width: 20%;
-      font-size: 1rem;
+      width: 30%;
+      font-size: 0.9rem;
+      padding: 3vw 3vw 3vw 0vw;
+      margin-left: 10vw;
     }
     @include desktop {
       font-size: 16px;
@@ -83,6 +86,11 @@
     background-position: center;
     margin-bottom: 10vw;
     padding-bottom: 10vw;
+    @include tablet {
+      height: 67vh;
+      margin: 0vw;
+      // padding: 0vw;
+    }
     &--overlay {
       height: 100%;
       height: 45vh;
@@ -92,12 +100,14 @@
       margin-bottom: 10vw;
       padding-bottom: 10vw;
       @include tablet {
+        height: 85vh;
+        // width: 100%;
         background-color: rgba(50, 50, 50, 0.5);
       }
     }
-    @include tablet {
-      height: 53vw;
-    }
+    // @include tablet {
+    //   height: 53vw;
+    // }
   }
   &__heading {
     color: $primary-white;
@@ -106,8 +116,11 @@
     padding: 10vw 0vw 0vw 3vw;
     margin-left: 2vw;
     @include tablet {
-      font-size: 3.1rem;
-      letter-spacing: 0.1rem;
+      font-size: 1.5rem;
+      font-weight: 400;
+      letter-spacing: 0.13rem;
+      padding-top: 7vw;
+      padding-bottom: 2vw;
     }
     @include desktop {
       font-size: 3.5rem;
@@ -120,17 +133,41 @@
     font-size: 1.8rem;
     letter-spacing: 0.1rem;
     font-weight: 600;
-    //  margin-top: 5vw;
+    @include tablet {
+      font-size: 3.3rem;
+      padding-top: 0vw;
+      margin-right: 18vw;
+    }
   }
   &__description {
     margin: 5vw;
     font-size: 1.8rem;
     letter-spacing: 0.1rem;
     font-weight: 600;
-  }
+    @include tablet {
+      font-size: 2.2rem;
+      margin-top: 6vw;
+      display: flex;
+      flex-direction: column;
+    }
   &__about--heading {
     @extend .shows-page__main-heading;
   }
+}
+}
+.shows-page__shows {
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: baseline;
+    position: relative;
+  }
+}
+.shows-page__description:hover {
+  background-color: $secondary-white;
+}
+.shows-page__description:active {
+  background-color: $secondary-silver;
 }
 .shows__labels {
   @extend .shows-page__heading;
@@ -140,50 +177,104 @@
   padding: 5vw 0vw 0vw 0vw;
   margin-top: 5vw;
   margin-left: 0vw;
+  @include tablet {
+    display: none;
+  }
 }
+
+// .show-page__labels {
+//   display: none;
+//   @include tablet {
+//   display: inli
+//   @extend .shows-page__heading;
+//   color: $primary-silver;
+//   letter-spacing: 0rem;
+//   font-weight: 600;
+//   padding: 5vw 0vw 0vw 0vw;
+//   margin-top: 5vw;
+//   margin-left: 0vw;
+// }
+
 .shows__date {
   @extend .shows-page__heading;
   color: $primary-black;
   font-weight: 700;
   padding: 5vw 0vw 0vw 0vw;
   margin-left: 0vw;
+  @include tablet {
+    display: flex;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.05rem;
+    padding-bottom: 0vw;
+  }
 }
-.shows__venue,
+.shows__venue {
+  @extend .shows__date;
+  font-weight: 600;
+  @include tablet {
+    font-weight: 600;
+    margin-left: 7vw;
+  }
+}
 .shows__location {
   @extend .shows__date;
   font-weight: 600;
-}
-.shows__location {
   margin-bottom: 8vw;
+  @include tablet {
+    font-weight: 600;
+    margin-left: 5vw;
+    align-items: flex-start;
+  }
 }
 .button__tickets {
   width: 100%;
   color: $secondary-white;
-  background-color: $secondary-black;
-  border-radius: 3px;
+  background-color: $primary-black;
+  border-radius: 6px;
   font-weight: 400;
   padding: 2vw;
   margin-bottom: 3vw;
+  @include tablet {
+    width: 23%;
+    height: 14%;
+    padding: 1vw;
+    margin-left: 10vw;
+    position: relative;
+    top: 4vw;
+  }
+}
+.button__tickets:active {
+  background-color: $secondary-black;
 }
 .shows__divider {
   background-color: $secondary-silver;
   margin-top: 3vw;
   border-bottom: 1px solid $secondary-silver;
   width: 100%;
+  @include tablet {
+    display: none;
+  }
 }
 .main-main__song {
   width: 80%;
   height: 30%;
-  border: 0px solid $primary-white;
+  // border: 0px solid $primary-white;
   border-radius: 4px;
   margin: 8vw 0vw 0vw 10vw;
+  @include tablet {
+    width: 50%;
+    height: 27%;
+    margin: 5vw 0vw 0vw 6vw;
+    
+  }
 }
 
 .footer {
   background-color: $primary-black;
   display: flex;
   flex-direction: column;
-  padding: 5vw 4vw;
+  padding: 6vw 4vw;
   @include tablet {
     flex-direction: row;
     flex-wrap: wrap;
@@ -199,8 +290,10 @@
     letter-spacing: 0.1rem;
     margin-bottom: 3vw;
     @include tablet {
+      font-size: 2rem;
       font-weight: 600;
       letter-spacing: 0.15rem;
+      margin-top: 3.3vw;
     }
     @include desktop {
       margin-bottom: 0vw;
@@ -224,6 +317,7 @@
     @include tablet {
       margin-right: 3vw;
       padding-top: 1.5vw;
+      margin-top: 3.3vw;
     }
     @include desktop {
       margin-right: 2vw;
@@ -244,7 +338,7 @@
     }
     &--container {
       @include tablet {
-        margin-left: 3vw;
+        margin-left: 5vw;
       }
       &--separate {
         @include tablet {
@@ -262,7 +356,7 @@
       font-weight: 400;
       margin-top: 0vw;
       margin-right: 3vw;
-      margin-bottom: 3vw;
+      margin-bottom: 4vw;
     }
     @include desktop {
       margin-bottom: 2vw;
@@ -271,7 +365,7 @@
   &__details {
     margin-top: 3vw;
     @include tablet {
-      margin-top: 0vw;
+      margin-top: 1vw;
     }
     @include desktop {
       margin-top: 0vw;
@@ -280,18 +374,19 @@
   &__emails {
     margin-top: 3vw;
     @include desktop {
-      margin-top: 1.5vw;
+      margin-top: 2.5vw;
+      margin-bottom: 1vw;
     }
   }
   &-logo {
     width: 42%;
     margin-top: 13vw;
     @include tablet {
-      width: 13%;
+      width: 15%;
       margin-top: 0vw;
       position: absolute;
-      left: 77vw;
-      top: 5vw;
+      left: 75vw;
+      top: 9vw;
     }
     @include desktop {
       width: 8%;

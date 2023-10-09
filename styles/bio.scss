@@ -7,7 +7,6 @@
   @include tablet {
     display: flex;
     align-items: flex-end;
-    padding-top: 1vw;
   }
   &__logo {
     height: 1.5rem;
@@ -48,10 +47,11 @@
       font-weight: normal;
     }
     @include tablet {
-      width: 13%;
+      width: 100%;
       border-bottom: 2px solid $primary-white;
-      font-size: 1rem;
-      padding: 3vw 3vw 3vw 0vw;
+      font-size: 0.8rem;
+      padding: 3vw 0vw;
+      margin-left: 2vw;
     }
     @include desktop {
       font-size: 1.2rem;
@@ -71,8 +71,8 @@
     }
     @include tablet {
       width: 20%;
-      font-size: 1rem;
-      padding: 3vw 3vw 3vw 14vw;
+      font-size: 0.9rem;
+      padding: 3vw 3vw 3vw 10vw;
     }
     @include desktop {
       font-size: 1.2rem;
@@ -93,6 +93,10 @@
     background-position: center;
     display: flex;
     align-items: center;
+    @include tablet {
+      // height: 0vw;
+      // margin: 0vw;
+    }
     &--overlay {
       width: 100%;
       height: 100%;
@@ -112,7 +116,7 @@
     font-size: 1.5rem;
     font-weight: 600;
     @include tablet {
-      font-size: 3.1rem;
+      font-size: 3.5rem;
       letter-spacing: 0.1rem;
     }
     @include desktop {
@@ -146,9 +150,9 @@
       margin-top: 0vw;
       margin-bottom: 3vw;
       @include tablet {
-        font-size: 1.3rem;
+        font-size: 1.4rem;
         line-height: 3.8vw;
-        margin: 0vw 15vw;
+        margin: 0vw 11vw;
       }
       @include desktop {
         font-size: 1.2rem;
@@ -159,7 +163,8 @@
     &--frase-author {
       margin: 3vw 0vw 0vw 0vw;
       @include tablet {
-        font-size: 0.9rem;
+        font-size: 1rem;
+        font-weight: 600;
         margin-top: 1.1vw;
       }
     }
@@ -170,8 +175,9 @@
       letter-spacing: 0.03vw;
       margin-bottom: 4vw;
       @include tablet {
-        font-size: 1.5rem;
-        margin: 0vw 11vw;
+        font-size: 1.35rem;
+        font-weight: 600;
+        margin: 1vw 7vw;
       }
       @include desktop {
         margin-left: 16vw;
@@ -185,8 +191,9 @@
       @include tablet {
         font-size: 0.8rem;
         letter-spacing: 0vw;
-        line-height: 2.5vw;
-        padding: 0vw 2vw 0vw 0vw;
+        line-height: 2.9vw;
+        padding: 1vw 2vw 0vw 0vw;
+        margin-top: 1vw;
       }
       @include desktop {
         line-height: 1.5vw;
@@ -194,11 +201,14 @@
     }
     &--article--secondary {
       margin-top: 3vw;
+      @include tablet {
+        margin-top: 0vw;
+      }
     }
     &--container {
       @include tablet {
         display: flex;
-        margin: 2vw 11vw 0vw 11vw;
+        margin: 2vw 11vw 0vw 7vw;
         margin-top: 2vw;
         margin-bottom: 0vw;
       }
@@ -217,6 +227,7 @@
       margin-bottom: 0vw;
     @include tablet {
       font-size: 2rem;
+      font-weight: 600;
       margin-top: 5vw;
     }
     @include desktop {
@@ -227,8 +238,9 @@
     width: 90%;
     margin: 3vw 0vw 3vw 5vw;
     @include tablet {
-      width: 70%;
-      margin: 3vw 0vw 4vw 15vw;
+      width: 80vw;
+      height: 40vw;
+      margin: 3vw 0vw 4vw 10vw;
     }
     @include desktop {
       width: 60vw;
@@ -245,6 +257,7 @@
     margin-bottom: 0vw;
     @include tablet {
       width: 25%;
+      height: 10%;
       margin: 2vw 0vw 1vw 6.5vw;
     }
     @include desktop {
@@ -410,10 +423,11 @@ width: 80%;
   top: 23vw;
   right: 2vw;
   @include tablet {
-    width: 4vw;
-    height: 4vw;
-    position: absolute;
-    left: -5vw;
+    // width: 10vw;
+    // height: 10vw;
+    position: relative;
+    left: 2vw;
+    top: 14vw;
   }
   @include desktop {
     width: 60vw;
@@ -429,7 +443,8 @@ width: 80%;
   left: 9vw;
   top: 13vw;
   @include tablet {
-    top: 5vw;
+    top: 6.8vw;
+    left: 12vw;
   }
 }
 .comments__date {
@@ -440,6 +455,9 @@ width: 80%;
   left: 65vw;
   top: 8vw;
   width: 35%;
+  @include tablet {
+    top: 5vw;
+  }
   @include desktop {
 
   }
@@ -452,13 +470,15 @@ width: 80%;
   left: 9vw;
   @include tablet {
     font-size: 0.9rem;
+    left: 12vw;
+    padding-top: 8vw;
   }
 }
 .footer {
   background-color: $primary-black;
   display: flex;
   flex-direction: column;
-  padding: 5vw 4vw;
+  padding: 6vw 4vw;
   @include tablet {
     flex-direction: row;
     flex-wrap: wrap;
@@ -474,8 +494,10 @@ width: 80%;
     letter-spacing: 0.1rem;
     margin-bottom: 3vw;
     @include tablet {
+      font-size: 2rem;
       font-weight: 600;
       letter-spacing: 0.15rem;
+      margin-top: 3.3vw;
     }
     @include desktop {
       margin-bottom: 0vw;
@@ -499,6 +521,7 @@ width: 80%;
     @include tablet {
       margin-right: 3vw;
       padding-top: 1.5vw;
+      margin-top: 3.3vw;
     }
     @include desktop {
       margin-right: 2vw;
@@ -519,7 +542,7 @@ width: 80%;
     }
     &--container {
       @include tablet {
-        margin-left: 3vw;
+        margin-left: 5vw;
       }
       &--separate {
         @include tablet {
@@ -537,7 +560,7 @@ width: 80%;
       font-weight: 400;
       margin-top: 0vw;
       margin-right: 3vw;
-      margin-bottom: 3vw;
+      margin-bottom: 4vw;
     }
     @include desktop {
       margin-bottom: 2vw;
@@ -546,7 +569,7 @@ width: 80%;
   &__details {
     margin-top: 3vw;
     @include tablet {
-      margin-top: 0vw;
+      margin-top: 1vw;
     }
     @include desktop {
       margin-top: 0vw;
@@ -555,18 +578,19 @@ width: 80%;
   &__emails {
     margin-top: 3vw;
     @include desktop {
-      margin-top: 1.5vw;
+      margin-top: 2.5vw;
+      margin-bottom: 1vw;
     }
   }
   &-logo {
     width: 42%;
     margin-top: 13vw;
     @include tablet {
-      width: 13%;
+      width: 15%;
       margin-top: 0vw;
       position: absolute;
-      left: 77vw;
-      top: 5vw;
+      left: 75vw;
+      top: 9vw;
     }
     @include desktop {
       width: 8%;
@@ -591,3 +615,4 @@ width: 80%;
     }
   }
 }
+

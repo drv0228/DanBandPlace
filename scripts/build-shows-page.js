@@ -30,12 +30,13 @@ let listOfConcerts = [
     location: 'San Francisco, CA'
 }
 ]
-const listShows = document.querySelector('.shows-page__description');
+// const listShows = document.querySelector('.shows-page__description');
+const listShows = document.querySelector('.shows-page__shows');
 
 function displayShows(){
     for( let i = 0; i < listOfConcerts.length; i++){
-
-        let showDateLabel = document.createElement('p');
+        
+        let showDateLabel = document.createElement('div');
         showDateLabel.classList.add('shows__labels');
         listShows.appendChild(showDateLabel);
 
