@@ -8,6 +8,9 @@
     display: flex;
     align-items: flex-end;
   }
+  @include desktop {
+    width: 100%;
+  }
   &__logo {
     height: 1.5rem;
     width: 100%;
@@ -47,7 +50,7 @@
       font-weight: normal;
     }
     @include tablet {
-      width: 100%;
+      width: 10%;
       border-bottom: 2px solid $primary-white;
       font-size: 0.8rem;
       padding: 3vw 0vw;
@@ -93,9 +96,9 @@
     background-position: center;
     display: flex;
     align-items: center;
-    @include tablet {
-      // height: 0vw;
-      // margin: 0vw;
+    @include desktop {
+      // height: 80vw;
+      width: 100%;
     }
     &--overlay {
       width: 100%;
@@ -223,8 +226,8 @@
     color: $primary-black;
     letter-spacing: 0.1rem;
     margin: 7vw 5vw 0vw 5vw;
-     margin-top: 7vw;
-      margin-bottom: 0vw;
+    margin-top: 7vw;
+    margin-bottom: 0vw;
     @include tablet {
       font-size: 2rem;
       font-weight: 600;
@@ -291,63 +294,63 @@
 }
 
 .form {
-border-bottom: 1px solid $secondary-silver;
-padding: 2vw;
-margin: 4vw;
-width: 80%;
-// position: relative;
-// margin-top: 3vw;
-// margin-bottom: 3vw;
-&__heading {
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: $primary-black;
-  letter-spacing: 0.1rem;
-  margin-bottom: 1vw;
-  @include tablet {
-    font-size: 2rem;
-    font-weight: 600;
-    margin-top: 0;
+  border-bottom: 1px solid $secondary-silver;
+  padding: 2vw;
+  margin: 4vw;
+  width: 80%;
+  // position: relative;
+  // margin-top: 3vw;
+  // margin-bottom: 3vw;
+  &__heading {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: $primary-black;
+    letter-spacing: 0.1rem;
+    margin-bottom: 1vw;
+    @include tablet {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-top: 0;
+    }
   }
-}
-&__content {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
-&__input-container {
-  position: relative;
-  left: 10vw;
-  bottom: 0vw;
-}
-&__content-label {
-  font-size: 0.5rem;
-  color: $primary-silver;
-  margin-top: 4vw;
-  @include tablet {
-    font-size: 0.8rem;
-    font-weight: 600;
+  &__content {
+    display: flex;
+    flex-direction: column;
+    position: relative;
   }
-}
-&__content-box {
-  border: 1px solid $secondary-silver;
-  border-radius: 4px;
-  background-color: $secondary-white;
-  height: 5vw;
-  padding: 0.7rem;
-  margin-top: 0.3rem;
-  margin-bottom: 0.3rem;
-  position: relative;
-  @include tablet {
-    height: 6.5vw;
-    padding: 1rem;
+  &__input-container {
+    position: relative;
+    left: 10vw;
+    bottom: 0vw;
   }
-}
-&__content-box--tablet {
-  @include tablet {
-    height: 13vw;
+  &__content-label {
+    font-size: 0.5rem;
+    color: $primary-silver;
+    margin-top: 4vw;
+    @include tablet {
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
   }
-}
+  &__content-box {
+    border: 1px solid $secondary-silver;
+    border-radius: 4px;
+    background-color: $secondary-white;
+    height: 5vw;
+    padding: 0.7rem;
+    margin-top: 0.3rem;
+    margin-bottom: 0.3rem;
+    position: relative;
+    @include tablet {
+      height: 6.5vw;
+      padding: 1rem;
+    }
+  }
+  &__content-box--tablet {
+    @include tablet {
+      height: 13vw;
+    }
+  }
   &__button {
     width: 76vw;
     height: 8vw;
@@ -369,44 +372,53 @@ width: 80%;
   &__button:hover {
     background-color: $secondary-black;
   }
-&__input-container {
-  display: flex;
-  flex-direction: column;
-}
-&__image {
-  width: 8vw;
-  height: 8vw;
-  border-radius: 50%;
-  position: absolute;
-  @include desktop {
-    width: 60vw;
-    height: 50vh;
-    margin: 3vw 0vw 2vw 20vw;
+  &__input-container {
+    display: flex;
+    flex-direction: column;
   }
+  &__image {
+    width: 8vw;
+    height: 8vw;
+    border-radius: 50%;
+    position: absolute;
+    @include tablet {
+      width: 6vw;
+      height: 6vw;
+    }
+    @include desktop {
+      width: 5vw;
+      height: 5vh;
+      margin: 3vw 0vw 2vw 20vw;
+    }
   }
   &__container--grey {
     background-color: $secondary-silver;
     position: absolute;
     top: 8vw;
-  @extend .form__image;
-  @include tablet {
-    width: 6vw;
-    height: 6vw;
-    top:5vw;
-  }
+    @extend .form__image;
+    @include tablet {
+      width: 6vw;
+      height: 6vw;
+      top: 6.5vw;
+    }
+    @include desktop {
+      width: 5vw;
+      height: 5vh;
+      margin: 3vw 0vw 2vw 20vw;
+    }
   }
 
-::placeholder {
-  color: $primary-black;
-  font-size: 0.7rem;
-  @include tablet {
-    font-size: 0.8rem;
-    letter-spacing: 0.07rem;
-    padding: 0vw;
-    position: absolute;
-    top: 2.5vw;
+  ::placeholder {
+    color: $primary-black;
+    font-size: 0.7rem;
+    @include tablet {
+      font-size: 0.8rem;
+      letter-spacing: 0.07rem;
+      padding: 0vw;
+      position: absolute;
+      top: 2.5vw;
+    }
   }
-}
 }
 .comments {
   background-color: white;
@@ -414,27 +426,27 @@ width: 80%;
   @include tablet {
     position: relative;
   }
-&__card {
-  width: 8vw;
-  height: 8vw;
-  border-radius: 50%;
-  background-color: $secondary-silver;
-  position: relative;
-  top: 23vw;
-  right: 2vw;
-  @include tablet {
-    // width: 10vw;
-    // height: 10vw;
+  &__card {
+    width: 8vw;
+    height: 8vw;
+    border-radius: 50%;
+    background-color: $secondary-silver;
     position: relative;
-    left: 2vw;
-    top: 14vw;
+    top: 23vw;
+    right: 2vw;
+    @include tablet {
+      width: 6vw;
+      height: 6vw;
+      position: relative;
+      left: 5vw;
+      top: 12vw;
+    }
+    @include desktop {
+      width: 8vw;
+      height: 8vw;
+      margin: 3vw 0vw 2vw 20vw;
+    }
   }
-  @include desktop {
-    width: 60vw;
-    height: 50vh;
-    margin: 3vw 0vw 2vw 20vw;
-  }
-}
 }
 .user__name {
   font-size: 0.8rem;
@@ -459,7 +471,6 @@ width: 80%;
     top: 5vw;
   }
   @include desktop {
-
   }
 }
 .comments__description {
@@ -497,7 +508,7 @@ width: 80%;
       font-size: 2rem;
       font-weight: 600;
       letter-spacing: 0.15rem;
-      margin-top: 3.3vw;
+      margin-top: 1vw;
     }
     @include desktop {
       margin-bottom: 0vw;
@@ -521,7 +532,7 @@ width: 80%;
     @include tablet {
       margin-right: 3vw;
       padding-top: 1.5vw;
-      margin-top: 3.3vw;
+      margin-top: 1vw;
     }
     @include desktop {
       margin-right: 2vw;
@@ -590,7 +601,7 @@ width: 80%;
       margin-top: 0vw;
       position: absolute;
       left: 75vw;
-      top: 9vw;
+      top: 7vw;
     }
     @include desktop {
       width: 8%;
@@ -615,4 +626,3 @@ width: 80%;
     }
   }
 }
-

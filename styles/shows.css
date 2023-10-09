@@ -30,7 +30,6 @@ body {
   .nav-bar {
     display: flex;
     align-items: flex-end;
-    padding-top: 1vw;
   }
 }
 .nav-bar__logo {
@@ -77,7 +76,7 @@ body {
 @media (min-width: 768px) {
   .nav-bar__bio-page {
     width: 13%;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     padding: 3vw 3vw 3vw 4vw;
   }
 }
@@ -102,7 +101,7 @@ body {
 }
 @media (min-width: 768px) {
   .nav-bar__shows-page {
-    width: 30%;
+    width: 7%;
     font-size: 0.9rem;
     padding: 3vw 3vw 3vw 0vw;
     margin-left: 10vw;
@@ -196,27 +195,67 @@ body {
     flex-direction: column;
   }
 }
+.shows-page__description-container {
+  background-color: transparent;
+  color: transparent;
+  font-size: 0rem;
+  display: flex;
+}
 @media (min-width: 768px) {
-  .shows-page__shows {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: baseline;
-    position: relative;
+  .shows-page__description-container {
+    color: #AFAFAF;
+    letter-spacing: 0rem;
+    font-size: 0.8rem;
+    font-weight: 600;
   }
 }
 
-.shows-page__description:hover {
-  background-color: #FAFAFA;
+@media (min-width: 768px) {
+  .show-page__labels {
+    margin: 5vw 20vw 0vw 0vw;
+    font-size: 0.7rem;
+  }
 }
 
-.shows-page__description:active {
+@media (min-width: 768px) {
+  .show-page__labels--venue {
+    margin-right: 13.5vw;
+  }
+}
+
+.main-main__song {
+  width: 80%;
+  height: 30%;
+  border-radius: 4px;
+  margin: 8vw 0vw 0vw 10vw;
+}
+@media (min-width: 768px) {
+  .main-main__song {
+    width: 50%;
+    height: 25%;
+    margin: 5vw 0vw 0vw 6vw;
+  }
+}
+
+.shows__container {
+  border-bottom: 2px solid #E1E1E1;
+}
+.shows__container:hover {
+  background-color: #FAFAFA;
+}
+.shows__container:active {
   background-color: #E1E1E1;
+}
+@media (min-width: 768px) {
+  .shows__container {
+    display: flex;
+  }
 }
 
 .shows__labels {
   color: #AFAFAF;
   letter-spacing: 0rem;
-  font-weight: 600;
+  font-weight: 700;
   padding: 5vw 0vw 0vw 0vw;
   margin-top: 5vw;
   margin-left: 0vw;
@@ -235,11 +274,14 @@ body {
 }
 @media (min-width: 768px) {
   .shows__date, .shows__location, .shows__venue {
+    width: 35%;
     display: flex;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     font-weight: 600;
     letter-spacing: 0.05rem;
     padding-bottom: 0vw;
+    padding-top: 3vw;
+    padding-bottom: 3vw;
   }
 }
 
@@ -248,8 +290,10 @@ body {
 }
 @media (min-width: 768px) {
   .shows__venue {
-    font-weight: 600;
-    margin-left: 7vw;
+    width: 20%;
+    font-size: 0.8rem;
+    font-weight: 400;
+    letter-spacing: 0vw;
   }
 }
 
@@ -259,8 +303,11 @@ body {
 }
 @media (min-width: 768px) {
   .shows__location {
+    width: 28%;
+    font-size: 0.8rem;
     font-weight: 600;
     margin-left: 5vw;
+    margin-bottom: 0vw;
     align-items: flex-start;
   }
 }
@@ -276,29 +323,19 @@ body {
 }
 @media (min-width: 768px) {
   .button__tickets {
-    width: 23%;
+    width: 27%;
     height: 14%;
     padding: 1vw;
     margin-left: 10vw;
     position: relative;
-    top: 4vw;
+    top: 2vw;
   }
 }
-
 .button__tickets:active {
   background-color: #000000;
 }
-
-.shows__divider {
-  background-color: #E1E1E1;
-  margin-top: 3vw;
-  border-bottom: 1px solid #E1E1E1;
-  width: 100%;
-}
-@media (min-width: 768px) {
-  .shows__divider {
-    display: none;
-  }
+.button__tickets:hover {
+  background-color: #000000;
 }
 
 .main-main__song {
@@ -345,7 +382,7 @@ body {
     font-size: 2rem;
     font-weight: 600;
     letter-spacing: 0.15rem;
-    margin-top: 3.3vw;
+    margin-top: 1vw;
   }
 }
 @media (min-width: 1280px) {
@@ -374,7 +411,7 @@ body {
   .footer__icons > img {
     margin-right: 3vw;
     padding-top: 1.5vw;
-    margin-top: 3.3vw;
+    margin-top: 1vw;
   }
 }
 @media (min-width: 1280px) {
@@ -459,7 +496,7 @@ body {
     margin-top: 0vw;
     position: absolute;
     left: 75vw;
-    top: 9vw;
+    top: 7vw;
   }
 }
 @media (min-width: 1280px) {

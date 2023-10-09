@@ -36,51 +36,51 @@ const listShows = document.querySelector('.shows-page__shows');
 function displayShows(){
     for( let i = 0; i < listOfConcerts.length; i++){
         
+        let showContainer = document.createElement('div');
+        showContainer.classList.add('shows__container');
+        listShows.appendChild(showContainer);
+        
         let showDateLabel = document.createElement('div');
         showDateLabel.classList.add('shows__labels');
-        listShows.appendChild(showDateLabel);
+        showContainer.appendChild(showDateLabel);
 
         showDateLabel.innerText = 'DATE';
 
         let showDate = document.createElement('p');
         showDate.classList.add('shows__date');
-        listShows.appendChild(showDate);
+        showContainer.appendChild(showDate);
 
         showDate.innerText = listOfConcerts[i].date;
 
         let showVenueLabel = document.createElement('p');
         showVenueLabel.classList.add('shows__labels');
-        listShows.appendChild(showVenueLabel);
+        showContainer.appendChild(showVenueLabel);
 
         showVenueLabel.innerText = 'VENUE';
 
         let showVenue = document.createElement('p');
         showVenue.classList.add('shows__venue');
-        listShows.appendChild(showVenue);
+        showContainer.appendChild(showVenue);
 
         showVenue.innerText = listOfConcerts[i].venue;
 
         let showLocationLabel = document.createElement('p');
         showLocationLabel.classList.add('shows__labels');
-        listShows.appendChild(showLocationLabel);
+        showContainer.appendChild(showLocationLabel);
 
         showLocationLabel.innerText = 'LOCATION';
 
         let showLocation = document.createElement('p');
         showLocation.classList.add('shows__location');
-        listShows.appendChild(showLocation);
+        showContainer.appendChild(showLocation);
 
         showLocation.innerText = listOfConcerts[i].location;
 
         let buttonTickets = document.createElement('button');
         buttonTickets.classList.add('button__tickets');
-        listShows.appendChild(buttonTickets);
+        showContainer.appendChild(buttonTickets);
 
         buttonTickets.innerText = "BUY TICKETS";
-
-        let showsDivider = document.createElement('div');
-        showsDivider.classList.add('shows__divider');
-        listShows.appendChild(showsDivider);
     }
 }
 displayShows();
