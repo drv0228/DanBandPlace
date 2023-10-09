@@ -45,7 +45,8 @@ body {
 }
 @media (min-width: 1280px) {
   .nav-bar__logo {
-    margin-left: 10vw;
+    width: 45%;
+    margin: 2.5vw 5vw 2.5vw 10vw;
   }
 }
 .nav-bar__list {
@@ -66,7 +67,7 @@ body {
   }
 }
 .nav-bar__bio-page {
-  color: #AFAFAF;
+  color: #E1E1E1;
   font-size: 0.9rem;
   font-weight: 400;
   text-align: center;
@@ -82,8 +83,8 @@ body {
 }
 @media (min-width: 1280px) {
   .nav-bar__bio-page {
-    font-size: 1.2rem;
-    padding-bottom: 2.5vw;
+    font-size: 0.85rem;
+    padding: 3vw 3vw 2.5vw 0vw;
   }
 }
 .nav-bar__shows-page {
@@ -131,6 +132,11 @@ body {
     margin: 0vw;
   }
 }
+@media (min-width: 1280px) {
+  .shows-page__hero {
+    height: 75vh;
+  }
+}
 .shows-page__hero--overlay {
   height: 100%;
   height: 45vh;
@@ -144,6 +150,11 @@ body {
   .shows-page__hero--overlay {
     height: 85vh;
     background-color: rgba(50, 50, 50, 0.5);
+  }
+}
+@media (min-width: 1280px) {
+  .shows-page__hero--overlay {
+    position: relative;
   }
 }
 .shows-page__heading, .shows__date, .shows__location, .shows__venue, .shows__labels, .shows-page__main-heading, .shows-page__description__about--heading {
@@ -164,9 +175,10 @@ body {
 }
 @media (min-width: 1280px) {
   .shows-page__heading, .shows__date, .shows__location, .shows__venue, .shows__labels, .shows-page__main-heading, .shows-page__description__about--heading {
-    font-size: 3.5rem;
+    font-size: 1.5rem;
     margin-left: 8vw;
-    padding-top: 18.6vw;
+    padding-top: 10vw;
+    letter-spacing: 0rem;
   }
 }
 .shows-page__main-heading, .shows-page__description__about--heading {
@@ -179,6 +191,14 @@ body {
     font-size: 3.3rem;
     padding-top: 0vw;
     margin-right: 18vw;
+  }
+}
+@media (min-width: 1280px) {
+  .shows-page__main-heading, .shows-page__description__about--heading {
+    width: 38%;
+    font-size: 3.3rem;
+    margin-left: 8vw;
+    padding-top: 0vw;
   }
 }
 .shows-page__description {
@@ -195,6 +215,21 @@ body {
     flex-direction: column;
   }
 }
+@media (min-width: 1280px) {
+  .shows-page__description {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 3vw;
+    position: relative;
+  }
+}
+@media (min-width: 1280px) {
+  .shows-page__description__about--heading {
+    font-size: 10rem;
+    padding-top: 10vw;
+  }
+}
 .shows-page__description-container {
   background-color: transparent;
   color: transparent;
@@ -209,6 +244,12 @@ body {
     font-weight: 600;
   }
 }
+@media (min-width: 1280px) {
+  .shows-page__description-container {
+    width: 60%;
+    padding-left: 2vw;
+  }
+}
 
 @media (min-width: 768px) {
   .show-page__labels {
@@ -216,10 +257,25 @@ body {
     font-size: 0.7rem;
   }
 }
+@media (min-width: 1280px) {
+  .show-page__labels {
+    font-size: 0.95rem;
+    margin-right: 15.5vw;
+  }
+}
+
+.show-page__table {
+  width: 65%;
+}
 
 @media (min-width: 768px) {
   .show-page__labels--venue {
     margin-right: 13.5vw;
+  }
+}
+@media (min-width: 1280px) {
+  .show-page__labels--venue {
+    margin-right: 9.5vw;
   }
 }
 
@@ -236,6 +292,14 @@ body {
     margin: 5vw 0vw 0vw 6vw;
   }
 }
+@media (min-width: 1280px) {
+  .main-main__song {
+    width: 20%;
+    position: relative;
+    left: 40vw;
+    bottom: 18vw;
+  }
+}
 
 .shows__container {
   border-bottom: 2px solid #E1E1E1;
@@ -249,6 +313,11 @@ body {
 @media (min-width: 768px) {
   .shows__container {
     display: flex;
+  }
+}
+@media (min-width: 1280px) {
+  .shows__container {
+    border-bottom: 0.5px solid #E1E1E1;
   }
 }
 
@@ -284,6 +353,15 @@ body {
     padding-bottom: 3vw;
   }
 }
+@media (min-width: 1280px) {
+  .shows__date, .shows__location, .shows__venue {
+    width: 31%;
+    font-size: 1.09rem;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+    padding-left: 2vw;
+  }
+}
 
 .shows__venue {
   font-weight: 600;
@@ -294,6 +372,13 @@ body {
     font-size: 0.8rem;
     font-weight: 400;
     letter-spacing: 0vw;
+  }
+}
+@media (min-width: 1280px) {
+  .shows__venue {
+    width: 14%;
+    font-size: 1rem;
+    padding: 2vw 1vw;
   }
 }
 
@@ -309,6 +394,14 @@ body {
     margin-left: 5vw;
     margin-bottom: 0vw;
     align-items: flex-start;
+  }
+}
+@media (min-width: 1280px) {
+  .shows__location {
+    width: 16%;
+    font-size: 1rem;
+    font-weight: 400;
+    padding-left: 0vw;
   }
 }
 
@@ -329,6 +422,16 @@ body {
     margin-left: 10vw;
     position: relative;
     top: 2vw;
+  }
+}
+@media (min-width: 1280px) {
+  .button__tickets {
+    width: 18%;
+    font-size: 1.1rem;
+    padding: 0.8vw;
+    margin: 0vw 2vw 1vw 2vw;
+    top: 1vw;
+    left: 3vw;
   }
 }
 .button__tickets:active {

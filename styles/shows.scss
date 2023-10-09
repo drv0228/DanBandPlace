@@ -17,7 +17,8 @@
       margin: 3vw 5vw;
     }
     @include desktop {
-      margin-left: 10vw;
+      width: 45%;
+      margin: 2.5vw 5vw 2.5vw 10vw;
     }
   }
   &__list {
@@ -34,7 +35,7 @@
     }
   }
   &__bio-page {
-    color: $primary-silver;
+    color: $secondary-silver;
     font-size: 0.9rem;
     font-weight: 400;
     text-align: center;
@@ -46,8 +47,8 @@
       padding: 3vw 3vw 3vw 4vw;
     }
     @include desktop {
-      font-size: 1.2rem;
-      padding-bottom: 2.5vw;
+      font-size: 0.85rem;
+      padding: 3vw 3vw 2.5vw 0vw;
     }
   }
   &__shows-page {
@@ -88,7 +89,9 @@
     @include tablet {
       height: 67vh;
       margin: 0vw;
-      // padding: 0vw;
+    }
+    @include desktop {
+     height: 75vh;
     }
     &--overlay {
       height: 100%;
@@ -100,13 +103,12 @@
       padding-bottom: 10vw;
       @include tablet {
         height: 85vh;
-        // width: 100%;
         background-color: rgba(50, 50, 50, 0.5);
       }
+      @include desktop {
+        position: relative;
+      }
     }
-    // @include tablet {
-    //   height: 53vw;
-    // }
   }
   &__heading {
     color: $primary-white;
@@ -122,9 +124,10 @@
       padding-bottom: 2vw;
     }
     @include desktop {
-      font-size: 3.5rem;
+      font-size: 1.5rem;
       margin-left: 8vw;
-      padding-top: 18.6vw;
+      padding-top: 10vw;
+      letter-spacing: 0rem;
     }
   }
   &__main-heading {
@@ -136,6 +139,12 @@
       font-size: 3.3rem;
       padding-top: 0vw;
       margin-right: 18vw;
+    }
+    @include desktop {
+      width: 38%;
+      font-size: 3.3rem;
+      margin-left: 8vw;
+      padding-top: 0vw;
     }
   }
   &__description {
@@ -149,8 +158,19 @@
       display: flex;
       flex-direction: column;
     }
+    @include desktop {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      margin: 3vw;
+      position: relative;
+    }
   &__about--heading {
     @extend .shows-page__main-heading;
+    @include desktop {
+      font-size: 10rem;
+      padding-top: 10vw;
+    }
   }
 }
 &__description-container {
@@ -164,6 +184,10 @@
   font-size: 0.8rem;
   font-weight: 600;
   }
+  @include desktop {
+    width: 60%;
+    padding-left: 2vw;
+  }
 }
 }
 .show-page__labels {
@@ -171,10 +195,20 @@
     margin: 5vw 20vw 0vw 0vw;
     font-size: 0.7rem;
   }
+  @include desktop {
+    font-size: 0.95rem;
+    margin-right: 15.5vw;
+  }
+}
+.show-page__table {
+  width: 65%;
 }
 .show-page__labels--venue {
   @include tablet {
   margin-right: 13.5vw;
+}
+@include desktop {
+  margin-right: 9.5vw;
 }
 }
 .main-main__song {
@@ -187,6 +221,12 @@
     height: 25%;
     margin: 5vw 0vw 0vw 6vw;
   }
+  @include desktop {
+    width: 20%;
+    position: relative;
+    left: 40vw;
+    bottom: 18vw;
+  }
 }
 .shows__container {
   border-bottom: 2px solid $secondary-silver;
@@ -198,6 +238,9 @@
 }
   @include tablet {
     display: flex;
+  }
+  @include desktop {
+    border-bottom: 0.5px solid $secondary-silver;
   }
 }
 
@@ -229,6 +272,13 @@
     padding-top: 3vw;
     padding-bottom: 3vw;
   }
+  @include desktop {
+    width: 31%;
+    font-size: 1.09rem;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+    padding-left: 2vw;
+  }
 }
 .shows__venue {
   @extend .shows__date;
@@ -238,6 +288,12 @@
     font-size: 0.8rem;
     font-weight: 400;
     letter-spacing: 0vw;
+  }
+  @include desktop {
+    width: 14%;
+    font-size: 1rem;
+    padding: 2vw 1vw;
+
   }
 }
 .shows__location {
@@ -251,6 +307,12 @@
     margin-left: 5vw;
     margin-bottom: 0vw;
     align-items: flex-start;
+  }
+  @include desktop {
+    width: 16%;
+    font-size: 1rem;
+    font-weight: 400;
+    padding-left: 0vw;
   }
 }
 .button__tickets {
@@ -268,6 +330,14 @@
     margin-left: 10vw;
     position: relative;
     top: 2vw;
+  }
+  @include desktop {
+    width: 18%;
+    font-size: 1.1rem;
+    padding: 0.8vw;
+    margin: 0vw 2vw 1vw 2vw;
+    top: 1vw;
+    left: 3vw;
   }
 &:active {
   background-color: $secondary-black;

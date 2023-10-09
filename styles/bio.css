@@ -50,7 +50,8 @@ body {
 }
 @media (min-width: 1280px) {
   .nav-bar__logo {
-    margin-left: 10vw;
+    width: 45%;
+    margin: 1vw 5vw 1.5vw 10vw;
   }
 }
 .nav-bar__list {
@@ -95,12 +96,14 @@ body {
 }
 @media (min-width: 1280px) {
   .nav-bar__bio-page {
-    font-size: 1.2rem;
-    padding-bottom: 2.5vw;
+    width: 6.5%;
+    font-size: 0.85rem;
+    padding: 2.5vw 3vw 1vw 0vw;
+    margin-right: 2vw;
   }
 }
 .nav-bar__shows-page {
-  color: #AFAFAF;
+  color: #E1E1E1;
   font-size: 0.9rem;
   font-weight: 400;
   text-align: center;
@@ -120,10 +123,9 @@ body {
 }
 @media (min-width: 1280px) {
   .nav-bar__shows-page {
-    font-size: 1.2rem;
     text-align: left;
-    padding-left: 2.5vw;
-    padding-bottom: 2.5vw;
+    font-size: 0.85rem;
+    padding: 2.5vw 3vw 2vw 0vw;
   }
 }
 
