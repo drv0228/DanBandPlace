@@ -110,10 +110,11 @@ body {
 }
 @media (min-width: 1280px) {
   .nav-bar__shows-page {
-    font-size: 16px;
+    width: 6%;
+    font-size: 0.8rem;
     text-align: left;
-    padding-left: 2.5vw;
-    padding-bottom: 2.5vw;
+    margin-left: 0vw;
+    padding-left: 0.5vw;
   }
 }
 
@@ -134,7 +135,7 @@ body {
 }
 @media (min-width: 1280px) {
   .shows-page__hero {
-    height: 75vh;
+    height: 85vh;
   }
 }
 .shows-page__hero--overlay {
@@ -259,8 +260,8 @@ body {
 }
 @media (min-width: 1280px) {
   .show-page__labels {
-    font-size: 0.95rem;
-    margin-right: 15.5vw;
+    font-size: 0.75rem;
+    margin-right: 14vw;
   }
 }
 
@@ -275,7 +276,7 @@ body {
 }
 @media (min-width: 1280px) {
   .show-page__labels--venue {
-    margin-right: 9.5vw;
+    margin-right: 10.5vw;
   }
 }
 
@@ -355,8 +356,8 @@ body {
 }
 @media (min-width: 1280px) {
   .shows__date, .shows__location, .shows__venue {
-    width: 31%;
-    font-size: 1.09rem;
+    width: 30%;
+    font-size: 0.9rem;
     padding-top: 2vw;
     padding-bottom: 2vw;
     padding-left: 2vw;
@@ -377,8 +378,8 @@ body {
 @media (min-width: 1280px) {
   .shows__venue {
     width: 14%;
-    font-size: 1rem;
-    padding: 2vw 1vw;
+    font-size: 0.9rem;
+    padding: 2vw 0vw;
   }
 }
 
@@ -398,8 +399,8 @@ body {
 }
 @media (min-width: 1280px) {
   .shows__location {
-    width: 16%;
-    font-size: 1rem;
+    width: 15%;
+    font-size: 0.8rem;
     font-weight: 400;
     padding-left: 0vw;
   }
@@ -426,8 +427,8 @@ body {
 }
 @media (min-width: 1280px) {
   .button__tickets {
-    width: 18%;
-    font-size: 1.1rem;
+    width: 19%;
+    font-size: 0.85rem;
     padding: 0.8vw;
     margin: 0vw 2vw 1vw 2vw;
     top: 1vw;

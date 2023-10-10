@@ -98,10 +98,6 @@
     background-position: center;
     display: flex;
     align-items: center;
-    @include desktop {
-      // height: 80vw;
-      width: 100%;
-    }
     &--overlay {
       width: 100%;
       height: 100%;
@@ -142,7 +138,7 @@
         margin-bottom: 2vw;
       }
       @include desktop {
-        margin: 2vw 2vw 1vw 3vw;
+        margin: 0vw 2vw 1vw 3vw;
       }
     }
     &--band-frase {
@@ -160,9 +156,9 @@
         margin: 0vw 11vw;
       }
       @include desktop {
-        font-size: 1.2rem;
-        line-height: 2.1vw;
-        margin: 0vw 34vw 0vw 20vw;
+        font-size: 1.35rem;
+        line-height: 2.5vw;
+        margin: 0vw 30vw 0vw 18vw;
       }
     }
     &--frase-author {
@@ -185,7 +181,9 @@
         margin: 1vw 7vw;
       }
       @include desktop {
-        margin-left: 16vw;
+        font-size: 1.5rem;
+        margin-left: 14vw;
+        margin-bottom: 0vw;
       }
     }
     &--article {
@@ -201,13 +199,21 @@
         margin-top: 1vw;
       }
       @include desktop {
-        line-height: 1.5vw;
+        font-size: 0.9rem;
+        line-height: 1.8vw;
+        margin-top: 0vw;
+        padding-top: 0vw;
       }
     }
     &--article--secondary {
       margin-top: 3vw;
       @include tablet {
         margin-top: 0vw;
+      }
+      @include desktop {
+        font-size: 0.9rem;
+        line-height: 1.8vw;
+        padding: 0vw;
       }
     }
     &--container {
@@ -218,7 +224,8 @@
         margin-bottom: 0vw;
       }
       @include desktop {
-        margin: 2vw 16vw 0vw 15vw;
+        margin: 0vw 16vw 0vw 14vw;
+        padding-top: 2vw;
       }
     }
   }
@@ -236,6 +243,7 @@
       margin-top: 5vw;
     }
     @include desktop {
+      font-size: 2.1rem;
       margin: 3vw 5vw 0vw 11vw;
     }
   }
@@ -248,14 +256,17 @@
       margin: 3vw 0vw 4vw 10vw;
     }
     @include desktop {
-      width: 60vw;
-      height: 50vh;
-      margin: 3vw 0vw 2vw 20vw;
+      width: 65vw;
+      height: 35vw;
+      margin: 3vw 0vw 2vw 18vw;
     }
   }
   &__photo-gallery {
     background-color: $secondary-white;
     padding-bottom: 3vw;
+    @include desktop {
+      padding-bottom: 2vw;
+    }
   }
   &__photo-gallery img {
     @extend .main-page__image;
@@ -267,7 +278,7 @@
     }
     @include desktop {
       width: 25vw;
-      height: 20vh;
+      height: 14.5vw;
       margin: 1vw;
     }
   }
@@ -281,6 +292,7 @@
       font-weight: 600;
     }
     @include desktop {
+      font-size: 2.2rem;
       padding: 3vw 9vw 2vw 10vw;
     }
   }
@@ -293,6 +305,14 @@
       padding: 0vw 9vw;
     }
   }
+  &__comment-form {
+    @include desktop {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
 }
 
 .form {
@@ -300,9 +320,14 @@
   padding: 2vw;
   margin: 4vw;
   width: 80%;
-  // position: relative;
-  // margin-top: 3vw;
-  // margin-bottom: 3vw;
+  @include desktop {
+    width: 100%;
+    margin: 0vw;
+    padding: 0vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   &__heading {
     font-size: 1.2rem;
     font-weight: 700;
@@ -314,11 +339,18 @@
       font-weight: 600;
       margin-top: 0;
     }
+    @include desktop {
+      padding-top: 5vw;
+      margin-left: 9vw;
+    }
   }
   &__content {
     display: flex;
     flex-direction: column;
     position: relative;
+    @include desktop {
+      width: 45%;
+    }
   }
   &__input-container {
     position: relative;
@@ -347,10 +379,18 @@
       height: 6.5vw;
       padding: 1rem;
     }
+    @include desktop {
+      height: 4vw;
+      width: 35vw;
+      padding: 0vw;
+    }
   }
   &__content-box--tablet {
     @include tablet {
       height: 13vw;
+    }
+    @include desktop {
+      height: 8vw;
     }
   }
   &__button {
@@ -370,6 +410,13 @@
       position: relative;
       left: 54vw;
     }
+    @include desktop {
+      width: 15vw;
+      height: 3vw;
+      padding: 0vw;
+      position: relative;
+      left: 20vw;
+    }
   }
   &__button:hover {
     background-color: $secondary-black;
@@ -388,9 +435,12 @@
       height: 6vw;
     }
     @include desktop {
-      width: 5vw;
-      height: 5vh;
+      width: 4vw;
+      height: 4vw;
       margin: 3vw 0vw 2vw 20vw;
+      position: relative;
+      bottom: 3vw;
+      right: 20vw;
     }
   }
   &__container--grey {
@@ -404,9 +454,12 @@
       top: 6.5vw;
     }
     @include desktop {
-      width: 5vw;
-      height: 5vh;
+      width: 4vw;
+      height: 4vw;
       margin: 3vw 0vw 2vw 20vw;
+      position: absolute;
+      top: 2.5vw;
+      right: 36vw;
     }
   }
 
@@ -420,12 +473,20 @@
       position: absolute;
       top: 2.5vw;
     }
+    @include desktop {
+      font-size: 0.8rem;
+      top: 1rem;
+      left: 1.8vw;
+    }
   }
 }
 .comments {
   background-color: white;
   font-size: 0.7rem;
   @include tablet {
+    position: relative;
+  }
+  @include desktop {
     position: relative;
   }
   &__card {
@@ -444,9 +505,11 @@
       top: 12vw;
     }
     @include desktop {
-      width: 8vw;
-      height: 8vw;
-      margin: 3vw 0vw 2vw 20vw;
+      width: 4vw;
+      height: 4vw;
+      margin: 0vw;
+      left: 7vw;
+      top: 6vw;
     }
   }
 }
@@ -459,6 +522,9 @@
   @include tablet {
     top: 6.8vw;
     left: 12vw;
+  }
+  @include desktop {
+    top: 3vw;
   }
 }
 .comments__date {
@@ -473,6 +539,9 @@
     top: 5vw;
   }
   @include desktop {
+    margin: 0vw;
+    left: 45vw;
+    top: 1.6vw;
   }
 }
 .comments__description {
@@ -485,6 +554,11 @@
     font-size: 0.9rem;
     left: 12vw;
     padding-top: 8vw;
+  }
+  @include desktop {
+    width: 85%;
+    border-top: 1.5px solid $secondary-silver;
+    padding: 2vw 0vw 0vw 0vw;
   }
 }
 .footer {

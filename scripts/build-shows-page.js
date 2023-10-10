@@ -30,7 +30,6 @@ let listOfConcerts = [
     location: 'San Francisco, CA'
 }
 ]
-// const listShows = document.querySelector('.shows-page__description');
 const listShows = document.querySelector('.shows-page__shows');
 
 function displayShows(){

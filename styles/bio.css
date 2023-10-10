@@ -142,11 +142,6 @@ body {
   display: flex;
   align-items: center;
 }
-@media (min-width: 1280px) {
-  .main-page__hero {
-    width: 100%;
-  }
-}
 .main-page__hero--overlay {
   width: 100%;
   height: 100%;
@@ -199,7 +194,7 @@ body {
 }
 @media (min-width: 1280px) {
   .main-page__description--band-article {
-    margin: 2vw 2vw 1vw 3vw;
+    margin: 0vw 2vw 1vw 3vw;
   }
 }
 .main-page__description--band-frase {
@@ -221,9 +216,9 @@ body {
 }
 @media (min-width: 1280px) {
   .main-page__description--band-frase {
-    font-size: 1.2rem;
-    line-height: 2.1vw;
-    margin: 0vw 34vw 0vw 20vw;
+    font-size: 1.35rem;
+    line-height: 2.5vw;
+    margin: 0vw 30vw 0vw 18vw;
   }
 }
 .main-page__description--frase-author {
@@ -252,7 +247,9 @@ body {
 }
 @media (min-width: 1280px) {
   .main-page__description--heading-article {
-    margin-left: 16vw;
+    font-size: 1.5rem;
+    margin-left: 14vw;
+    margin-bottom: 0vw;
   }
 }
 .main-page__description--article {
@@ -272,7 +269,10 @@ body {
 }
 @media (min-width: 1280px) {
   .main-page__description--article {
-    line-height: 1.5vw;
+    font-size: 0.9rem;
+    line-height: 1.8vw;
+    margin-top: 0vw;
+    padding-top: 0vw;
   }
 }
 .main-page__description--article--secondary {
@@ -281,6 +281,13 @@ body {
 @media (min-width: 768px) {
   .main-page__description--article--secondary {
     margin-top: 0vw;
+  }
+}
+@media (min-width: 1280px) {
+  .main-page__description--article--secondary {
+    font-size: 0.9rem;
+    line-height: 1.8vw;
+    padding: 0vw;
   }
 }
 @media (min-width: 768px) {
@@ -293,7 +300,8 @@ body {
 }
 @media (min-width: 1280px) {
   .main-page__description--container {
-    margin: 2vw 16vw 0vw 15vw;
+    margin: 0vw 16vw 0vw 14vw;
+    padding-top: 2vw;
   }
 }
 .main-page__about--heading {
@@ -314,6 +322,7 @@ body {
 }
 @media (min-width: 1280px) {
   .main-page__about--heading {
+    font-size: 2.1rem;
     margin: 3vw 5vw 0vw 11vw;
   }
 }
@@ -330,14 +339,19 @@ body {
 }
 @media (min-width: 1280px) {
   .main-page__image, .main-page__photo-gallery img {
-    width: 60vw;
-    height: 50vh;
-    margin: 3vw 0vw 2vw 20vw;
+    width: 65vw;
+    height: 35vw;
+    margin: 3vw 0vw 2vw 18vw;
   }
 }
 .main-page__photo-gallery {
   background-color: #FAFAFA;
   padding-bottom: 3vw;
+}
+@media (min-width: 1280px) {
+  .main-page__photo-gallery {
+    padding-bottom: 2vw;
+  }
 }
 .main-page__photo-gallery img {
   margin-bottom: 0vw;
@@ -352,7 +366,7 @@ body {
 @media (min-width: 1280px) {
   .main-page__photo-gallery img {
     width: 25vw;
-    height: 20vh;
+    height: 14.5vw;
     margin: 1vw;
   }
 }
@@ -370,6 +384,7 @@ body {
 }
 @media (min-width: 1280px) {
   .main-page__photo-gallery > p {
+    font-size: 2.2rem;
     padding: 3vw 9vw 2vw 10vw;
   }
 }
@@ -384,12 +399,30 @@ body {
     padding: 0vw 9vw;
   }
 }
+@media (min-width: 1280px) {
+  .main-page__comment-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
 
 .form {
   border-bottom: 1px solid #E1E1E1;
   padding: 2vw;
   margin: 4vw;
   width: 80%;
+}
+@media (min-width: 1280px) {
+  .form {
+    width: 100%;
+    margin: 0vw;
+    padding: 0vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .form__heading {
   font-size: 1.2rem;
@@ -405,10 +438,21 @@ body {
     margin-top: 0;
   }
 }
+@media (min-width: 1280px) {
+  .form__heading {
+    padding-top: 5vw;
+    margin-left: 9vw;
+  }
+}
 .form__content {
   display: flex;
   flex-direction: column;
   position: relative;
+}
+@media (min-width: 1280px) {
+  .form__content {
+    width: 45%;
+  }
 }
 .form__input-container {
   position: relative;
@@ -442,9 +486,21 @@ body {
     padding: 1rem;
   }
 }
+@media (min-width: 1280px) {
+  .form__content-box {
+    height: 4vw;
+    width: 35vw;
+    padding: 0vw;
+  }
+}
 @media (min-width: 768px) {
   .form__content-box--tablet {
     height: 13vw;
+  }
+}
+@media (min-width: 1280px) {
+  .form__content-box--tablet {
+    height: 8vw;
   }
 }
 .form__button {
@@ -465,6 +521,15 @@ body {
     padding: 1vw;
     position: relative;
     left: 54vw;
+  }
+}
+@media (min-width: 1280px) {
+  .form__button {
+    width: 15vw;
+    height: 3vw;
+    padding: 0vw;
+    position: relative;
+    left: 20vw;
   }
 }
 .form__button:hover {
@@ -488,9 +553,12 @@ body {
 }
 @media (min-width: 1280px) {
   .form__image, .form__container--grey {
-    width: 5vw;
-    height: 5vh;
+    width: 4vw;
+    height: 4vw;
     margin: 3vw 0vw 2vw 20vw;
+    position: relative;
+    bottom: 3vw;
+    right: 20vw;
   }
 }
 .form__container--grey {
@@ -507,9 +575,12 @@ body {
 }
 @media (min-width: 1280px) {
   .form__container--grey {
-    width: 5vw;
-    height: 5vh;
+    width: 4vw;
+    height: 4vw;
     margin: 3vw 0vw 2vw 20vw;
+    position: absolute;
+    top: 2.5vw;
+    right: 36vw;
   }
 }
 .form ::-moz-placeholder {
@@ -536,12 +607,29 @@ body {
     top: 2.5vw;
   }
 }
+@media (min-width: 1280px) {
+  .form ::-moz-placeholder {
+    font-size: 0.8rem;
+    top: 1rem;
+    left: 1.8vw;
+  }
+  .form ::placeholder {
+    font-size: 0.8rem;
+    top: 1rem;
+    left: 1.8vw;
+  }
+}
 
 .comments {
   background-color: white;
   font-size: 0.7rem;
 }
 @media (min-width: 768px) {
+  .comments {
+    position: relative;
+  }
+}
+@media (min-width: 1280px) {
   .comments {
     position: relative;
   }
@@ -566,9 +654,11 @@ body {
 }
 @media (min-width: 1280px) {
   .comments__card {
-    width: 8vw;
-    height: 8vw;
-    margin: 3vw 0vw 2vw 20vw;
+    width: 4vw;
+    height: 4vw;
+    margin: 0vw;
+    left: 7vw;
+    top: 6vw;
   }
 }
 
@@ -583,6 +673,11 @@ body {
   .user__name {
     top: 6.8vw;
     left: 12vw;
+  }
+}
+@media (min-width: 1280px) {
+  .user__name {
+    top: 3vw;
   }
 }
 
@@ -600,6 +695,14 @@ body {
     top: 5vw;
   }
 }
+@media (min-width: 1280px) {
+  .comments__date {
+    margin: 0vw;
+    left: 45vw;
+    top: 1.6vw;
+  }
+}
+
 .comments__description {
   font-size: 0.79rem;
   border-top: 1px solid #E1E1E1;
@@ -612,6 +715,13 @@ body {
     font-size: 0.9rem;
     left: 12vw;
     padding-top: 8vw;
+  }
+}
+@media (min-width: 1280px) {
+  .comments__description {
+    width: 85%;
+    border-top: 1.5px solid #E1E1E1;
+    padding: 2vw 0vw 0vw 0vw;
   }
 }
 
