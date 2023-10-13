@@ -1,40 +1,10 @@
-let listOfConcerts = [
-    {
-        date: 'Mon Sept 06 2021',
-        venue: 'Ronald Lane',
-        location: 'San Francisco, CA'
-    },
-    {
-        date: 'Tue Sept 21 2021',
-        venue: 'Pier 3 East',
-        location: 'San Francisco, CA'
-    },
-     {
-        date: 'Fri Oct 15 2021',
-        venue: 'View Lounge',
-        location: 'San Francisco, CA'
-  },
-  {
-    date: 'Sat Nov 06 2021',
-    venue: 'Hyatt Agency',
-    location: 'San Francisco, CA'
-},
-{
-    date: 'Fri Nov 26 2021',
-    venue: 'Moscow Center',
-    location: 'San Francisco, CA'
-},
-{
-    date: 'Wed Dec 15 2021',
-    venue: 'Press Club',
-    location: 'San Francisco, CA'
-}
-]
+const key = "api_key=e106b022-3c18-4662-af84-1a28ac07b97d";
+const backend = new BandSiteAPI(key);
+
 const listShows = document.querySelector('.shows-page__shows');
 
-function displayShows(){
-    for( let i = 0; i < listOfConcerts.length; i++){
-        
+function displayShow(show){
+
         let showContainer = document.createElement('div');
         showContainer.classList.add('shows__container');
         listShows.appendChild(showContainer);
@@ -47,9 +17,12 @@ function displayShows(){
 
         let showDate = document.createElement('p');
         showDate.classList.add('shows__date');
+        const readableDate = new Date(Number(show.date)).toLocaleDateString();
+        showDate.innerText = readableDate;
         showContainer.appendChild(showDate);
-
-        showDate.innerText = listOfConcerts[i].date;
+        
+    
+        
 
         let showVenueLabel = document.createElement('p');
         showVenueLabel.classList.add('shows__labels');
@@ -59,9 +32,10 @@ function displayShows(){
 
         let showVenue = document.createElement('p');
         showVenue.classList.add('shows__venue');
+        showVenue.innerText = show.place;
         showContainer.appendChild(showVenue);
 
-        showVenue.innerText = listOfConcerts[i].venue;
+       
 
         let showLocationLabel = document.createElement('p');
         showLocationLabel.classList.add('shows__labels');
@@ -71,9 +45,10 @@ function displayShows(){
 
         let showLocation = document.createElement('p');
         showLocation.classList.add('shows__location');
+        showLocation.innerText = show.location;
         showContainer.appendChild(showLocation);
 
-        showLocation.innerText = listOfConcerts[i].location;
+       
 
         let buttonTickets = document.createElement('button');
         buttonTickets.classList.add('button__tickets');
@@ -81,5 +56,13 @@ function displayShows(){
 
         buttonTickets.innerText = "BUY TICKETS";
     }
-}
-displayShows();
+
+    async function displayShows() {
+        const shows = await backend.getShows()
+        console.log(shows);
+        listShows.innerHTML = '';
+        for (const show of shows){
+            displayShow(show)
+        }
+    }
+    displayShows();

@@ -1,31 +1,15 @@
-let usersComments = [
-    {
-        name: 'Connor Walton',
-        date: '02/17/2021',
-        comment: 'This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.'
-    },
-    {
-        name: 'Emilie Beach',
-        date: '01/09/2021',
-       comment: 'I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.'
-    },
-     {
-         name: 'Miles Acosta',
-         date: '12/20/2020',
-         comment: "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough."
-  }
-]
-
+const key = "api_key=e106b022-3c18-4662-af84-1a28ac07b97d";
 const form = document.querySelector('.form');
 const commentButton = document.querySelector('.form__button');
 const date = new Date(Date.now());
 const dateF = date.toLocaleDateString();
 
-function displayComment(){
-    const container = document.querySelector('.comments');
-    container.innerHTML = '';
+const backend = new BandSiteAPI(key);
+const container = document.querySelector('.comments');
 
-    for( let i = 0; i < usersComments.length; i++ ){
+
+
+function displayComment(newComment) {
         let userComment = document.createElement('div');
         userComment.classList.add('comments__card');
         container.appendChild(userComment);
@@ -34,45 +18,52 @@ function displayComment(){
         userName.classList.add('user__name');
         container.appendChild(userName);
 
-        userName.innerText = usersComments[i].name;
+        userName.innerText = newComment.name;
 
         let commentDate = document.createElement('h2');
         commentDate.classList.add('comments__date');
+        const readableDate = new Date(Number( newComment.timestamp)).toLocaleDateString();
+        commentDate.innerText = readableDate;
         container.appendChild(commentDate);
-
-        commentDate.innerText = usersComments[i].date;
 
         let userDescription = document.createElement('p');
         userDescription.classList.add('comments__description');
+        userDescription.innerText = newComment.comment;
         container.appendChild(userDescription);
+}
 
-        userDescription.innerText = usersComments[i].comment;
+async function displayComments() {
+    const comments = await backend.getComment()
+    console.log(comments);
+    container.innerHTML = '';
+    for (const comment of comments){
+        displayComment(comment)
     }
 }
 
-function makeNewComment (userName, dateF, userComment) {
-    let newComment = {
-        name: userName,
-        date: dateF,
-        comment: userComment
-    }
-
-    usersComments.unshift(newComment);
-    displayComment();
-}
-
-function handleNewComments(event) {
+async function builtNewComment(event) {
     event.preventDefault();
+
+    let newComment = {
+        name: event.target.userName.value,
+        comment: event.target.userComment.value,
+    }
    
-
-    const userName = event.target.userName.value;
-    const userComment = event.target.userComment.value;
-
-    makeNewComment(userName, dateF, userComment);
-
+    await backend.postComment(newComment);
     form.reset();
+    displayComments(newComment);
+    
 }
 
+form.addEventListener('submit', builtNewComment);
+displayComments();
 
-form.addEventListener('submit', handleNewComments);
-displayComment();
+// const postComment = async (newComment) => {
+//     try {
+//     const response = await axios.post(`https://project-1-api.herokuapp.com/comments?api_key=e106b022-3c18-4662-af84-1a28ac07b97d`, newComment);
+//     let otherComments = response.data;
+//     displayComments();   
+//     } 
+//     catch (error) {
+//           console.log(error);  
+//     }

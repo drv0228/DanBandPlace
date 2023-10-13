@@ -2,91 +2,6 @@
 @use "./partials/mixins" as *;
 @use "./partials/global" as *;
 
-.nav-bar {
-  background-color: $primary-black;
-  @include tablet {
-    display: flex;
-    align-items: flex-end;
-  }
-  @include desktop {
-    width: 100%;
-  }
-  &__logo {
-    height: 1.5rem;
-    width: 100%;
-    margin: 1rem 0;
-    @include tablet {
-      width: 65%;
-      margin: 3vw 5vw;
-    }
-    @include desktop {
-      width: 45%;
-      margin: 1vw 5vw 1.5vw 10vw;
-    }
-  }
-  &__list {
-    list-style-type: none;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    @include tablet {
-      justify-content: left;
-      margin-left: 2vw;
-    }
-    @include desktop {
-      margin-left: 4vw;
-    }
-  }
-  &__bio-page {
-    color: $primary-white;
-    font-size: 0.9rem;
-    font-weight: 600;
-    text-align: center;
-    width: 50%;
-    padding-bottom: 1rem;
-    border-bottom: 3px solid $primary-white;
-    text-decoration: none;
-    &:hover {
-      font-weight: 400;
-      font-weight: normal;
-    }
-    @include tablet {
-      width: 10%;
-      border-bottom: 2px solid $primary-white;
-      font-size: 0.8rem;
-      padding: 3vw 0vw;
-      margin-left: 2vw;
-    }
-    @include desktop {
-      width: 6.5%;
-      font-size: 0.85rem;
-      padding: 2.5vw 3vw 1vw 0vw;
-      margin-right: 2vw;
-    }
-  }
-  &__shows-page {
-    color: $secondary-silver;
-    font-size: 0.9rem;
-    font-weight: 400;
-    text-align: center;
-    width: 50%;
-    text-decoration: none;
-    &:hover {
-      font-weight: 400;
-      font-style: normal;
-    }
-    @include tablet {
-      width: 20%;
-      font-size: 0.9rem;
-      padding: 3vw 3vw 3vw 10vw;
-    }
-    @include desktop {
-      text-align: left;
-      font-size: 0.85rem;
-      padding: 2.5vw 3vw 2vw 0vw;
-    }
-  }
-}
 .main-page {
   position: relative;
   &__hero {
@@ -561,144 +476,145 @@
     padding: 2vw 0vw 0vw 0vw;
   }
 }
-.footer {
-  background-color: $primary-black;
-  display: flex;
-  flex-direction: column;
-  padding: 6vw 4vw;
-  @include tablet {
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding: 3vw 4vw 12vw 4vw;
-    position: relative;
-  }
-  @include desktop {
-    padding: 1vw 8vw 5vw 8vw;
-  }
-  &__message {
-    font-size: 1.5rem;
-    font-weight: 700;
-    letter-spacing: 0.1rem;
-    margin-bottom: 3vw;
-    @include tablet {
-      font-size: 2rem;
-      font-weight: 600;
-      letter-spacing: 0.15rem;
-      margin-top: 1vw;
-    }
-    @include desktop {
-      margin-bottom: 0vw;
-      padding-bottom: 0vw;
-    }
-  }
-  & > div {
-    color: $secondary-white;
-    font-size: 0.65rem;
-    letter-spacing: 0.01rem;
-    padding: 3vw;
-    padding: 1vw;
-    @include tablet {
-      letter-spacing: 0.02rem;
-      padding: 2vw;
-    }
-  }
-  &__icons > img {
-    margin-right: 11vw;
 
-    @include tablet {
-      margin-right: 3vw;
-      padding-top: 1.5vw;
-      margin-top: 1vw;
-    }
-    @include desktop {
-      margin-right: 2vw;
-      padding-top: 0.7vw;
-    }
-  }
-  &__icons {
-    @include tablet {
-      margin-right: 20vw;
-    }
-    @include desktop {
-      margin-left: 0.9vw;
-    }
-  }
-  &__info {
-    @include tablet {
-      display: flex;
-    }
-    &--container {
-      @include tablet {
-        margin-left: 5vw;
-      }
-      &--separate {
-        @include tablet {
-          margin-left: 4vw;
-        }
-      }
-    }
-  }
-  &__names {
-    font-weight: 600;
-    margin-top: 5vw;
-    @include tablet {
-      color: $primary-white;
-      font-size: 0.8rem;
-      font-weight: 400;
-      margin-top: 0vw;
-      margin-right: 3vw;
-      margin-bottom: 4vw;
-    }
-    @include desktop {
-      margin-bottom: 2vw;
-    }
-  }
-  &__details {
-    margin-top: 3vw;
-    @include tablet {
-      margin-top: 1vw;
-    }
-    @include desktop {
-      margin-top: 0vw;
-    }
-  }
-  &__emails {
-    margin-top: 3vw;
-    @include desktop {
-      margin-top: 2.5vw;
-      margin-bottom: 1vw;
-    }
-  }
-  &-logo {
-    width: 42%;
-    margin-top: 13vw;
-    @include tablet {
-      width: 15%;
-      margin-top: 0vw;
-      position: absolute;
-      left: 75vw;
-      top: 7vw;
-    }
-    @include desktop {
-      width: 8%;
-      position: absolute;
-      left: 72vw;
-      top: 4vw;
-    }
-  }
-  &__copyright {
-    font-size: 0.65rem;
-    @include tablet {
-      font-size: 0.8rem;
-      position: absolute;
-      left: 0vw;
-      bottom: 6vw;
-      padding-left: 6vw;
-    }
-    @include desktop {
-      position: absolute;
-      left: 4vw;
-      bottom: 2vw;
-    }
-  }
-}
+// .footer {
+//   background-color: $primary-black;
+//   display: flex;
+//   flex-direction: column;
+//   padding: 6vw 4vw;
+//   @include tablet {
+//     flex-direction: row;
+//     flex-wrap: wrap;
+//     padding: 3vw 4vw 12vw 4vw;
+//     position: relative;
+//   }
+//   @include desktop {
+//     padding: 1vw 8vw 5vw 8vw;
+//   }
+//   &__message {
+//     font-size: 1.5rem;
+//     font-weight: 700;
+//     letter-spacing: 0.1rem;
+//     margin-bottom: 3vw;
+//     @include tablet {
+//       font-size: 2rem;
+//       font-weight: 600;
+//       letter-spacing: 0.15rem;
+//       margin-top: 1vw;
+//     }
+//     @include desktop {
+//       margin-bottom: 0vw;
+//       padding-bottom: 0vw;
+//     }
+//   }
+//   & > div {
+//     color: $secondary-white;
+//     font-size: 0.65rem;
+//     letter-spacing: 0.01rem;
+//     padding: 3vw;
+//     padding: 1vw;
+//     @include tablet {
+//       letter-spacing: 0.02rem;
+//       padding: 2vw;
+//     }
+//   }
+//   &__icons > img {
+//     margin-right: 11vw;
+
+//     @include tablet {
+//       margin-right: 3vw;
+//       padding-top: 1.5vw;
+//       margin-top: 1vw;
+//     }
+//     @include desktop {
+//       margin-right: 2vw;
+//       padding-top: 0.7vw;
+//     }
+//   }
+//   &__icons {
+//     @include tablet {
+//       margin-right: 20vw;
+//     }
+//     @include desktop {
+//       margin-left: 0.9vw;
+//     }
+//   }
+//   &__info {
+//     @include tablet {
+//       display: flex;
+//     }
+//     &--container {
+//       @include tablet {
+//         margin-left: 5vw;
+//       }
+//       &--separate {
+//         @include tablet {
+//           margin-left: 4vw;
+//         }
+//       }
+//     }
+//   }
+//   &__names {
+//     font-weight: 600;
+//     margin-top: 5vw;
+//     @include tablet {
+//       color: $primary-white;
+//       font-size: 0.8rem;
+//       font-weight: 400;
+//       margin-top: 0vw;
+//       margin-right: 3vw;
+//       margin-bottom: 4vw;
+//     }
+//     @include desktop {
+//       margin-bottom: 2vw;
+//     }
+//   }
+//   &__details {
+//     margin-top: 3vw;
+//     @include tablet {
+//       margin-top: 1vw;
+//     }
+//     @include desktop {
+//       margin-top: 0vw;
+//     }
+//   }
+//   &__emails {
+//     margin-top: 3vw;
+//     @include desktop {
+//       margin-top: 2.5vw;
+//       margin-bottom: 1vw;
+//     }
+//   }
+//   &-logo {
+//     width: 42%;
+//     margin-top: 13vw;
+//     @include tablet {
+//       width: 15%;
+//       margin-top: 0vw;
+//       position: absolute;
+//       left: 75vw;
+//       top: 7vw;
+//     }
+//     @include desktop {
+//       width: 8%;
+//       position: absolute;
+//       left: 72vw;
+//       top: 4vw;
+//     }
+//   }
+//   &__copyright {
+//     font-size: 0.65rem;
+//     @include tablet {
+//       font-size: 0.8rem;
+//       position: absolute;
+//       left: 0vw;
+//       bottom: 6vw;
+//       padding-left: 6vw;
+//     }
+//     @include desktop {
+//       position: absolute;
+//       left: 4vw;
+//       bottom: 2vw;
+//     }
+//   }
+// }
