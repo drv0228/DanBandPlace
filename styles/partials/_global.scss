@@ -28,11 +28,11 @@
 * {
   margin: 0;
   padding: 0;
-  background-color: #FFFFFF;
   box-sizing: border-box;
 }
 body {
   font-family: "Avenir";
+  background-color: #ffffff;
 }
 
 .nav-bar {
@@ -71,13 +71,10 @@ body {
     }
   }
   &__bio-page {
-    color: $primary-white;
     font-size: 0.9rem;
-    font-weight: 600;
     text-align: center;
     width: 50%;
     padding-bottom: 1rem;
-    border-bottom: 3px solid $primary-white;
     text-decoration: none;
     &:hover {
       font-weight: 400;
@@ -98,25 +95,21 @@ body {
     }
   }
   &__shows-page {
-    color: $secondary-silver;
     font-size: 0.9rem;
-    font-weight: 400;
     text-align: center;
     width: 50%;
     text-decoration: none;
-    &:hover {
-      font-weight: 400;
-      font-style: normal;
-    }
     @include tablet {
-      width: 20%;
+      width: 6.5%;
       font-size: 0.9rem;
-      padding: 3vw 3vw 3vw 10vw;
+      padding: 3vw 0vw;
+      margin-left: 8vw;
     }
     @include desktop {
       text-align: left;
       font-size: 0.85rem;
-      padding: 2.5vw 3vw 2vw 0vw;
+      padding: 2.5vw 0vw;
+      margin-left: 2vw;
     }
   }
 }
