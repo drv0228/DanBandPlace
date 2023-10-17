@@ -7,8 +7,6 @@ const dateF = date.toLocaleDateString();
 const backend = new BandSiteAPI(key);
 const container = document.querySelector('.comments');
 
-
-
 function displayComment(newComment) {
         let userComment = document.createElement('div');
         userComment.classList.add('comments__card');
@@ -57,13 +55,3 @@ async function builtNewComment(event) {
 
 form.addEventListener('submit', builtNewComment);
 displayComments();
-
-// const postComment = async (newComment) => {
-//     try {
-//     const response = await axios.post(`https://project-1-api.herokuapp.com/comments?api_key=e106b022-3c18-4662-af84-1a28ac07b97d`, newComment);
-//     let otherComments = response.data;
-//     displayComments();   
-//     } 
-//     catch (error) {
-//           console.log(error);  
-//     }

@@ -19,7 +19,6 @@ class BandSiteAPI {
     async postComment(newComment) {
         try {
         const response = await axios.post(`https://project-1-api.herokuapp.com/comments?api_key=e106b022-3c18-4662-af84-1a28ac07b97d`, newComment);
-        // return response.data;
         console.log(response);
         
         } 

@@ -4,14 +4,14 @@
 
 .nav-bar {
   &__bio-page {
-  color: $primary-white;
-  text-align: center;
-  border-bottom: 3px solid $primary-white;
-  text-align: center;
-  &:hover {
-    font-weight: 400;
-    font-style: normal;
-  }    
+    color: $primary-white;
+    text-align: center;
+    border-bottom: 3px solid $primary-white;
+    text-align: center;
+    &:hover {
+      font-weight: 400;
+      font-style: normal;
+    }
   }
   &__shows-page {
     color: $secondary-silver;
@@ -251,7 +251,7 @@
 .form {
   border-bottom: 1px solid $secondary-silver;
   padding: 2vw;
-  margin: 4vw;
+  margin: 0vw 4vw;
   width: 80%;
   @include desktop {
     width: 100%;
@@ -266,11 +266,12 @@
     font-weight: 700;
     color: $primary-black;
     letter-spacing: 0.1rem;
-    margin-bottom: 1vw;
+    // margin-bottom: 1vw;
+    padding: 4vw;
     @include tablet {
       font-size: 2rem;
       font-weight: 600;
-      margin-top: 0;
+      padding: 5vw;
     }
     @include desktop {
       padding-top: 5vw;
@@ -416,6 +417,7 @@
 .comments {
   background-color: white;
   font-size: 0.7rem;
+  margin-bottom: 2vw;
   @include tablet {
     position: relative;
   }

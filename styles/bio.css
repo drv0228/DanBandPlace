@@ -1,16 +1,16 @@
 @font-face {
-  font-family: "Avenir";
-  src: url("../../assets/Font/AvenirNextLTPro-Regular.otf") format("opentype"), url("../../assets/Font/Alternative files/AvenirNextLTPro.ttf") format("truetype");
+  font-family: "Dayana";
+  src: url("../../assets/fonts/AvenirNextLTPro-Regular.otf") format("opentype"), url("../../assets/fonts/Alternative files/AvenirNextLTPro.ttf") format("truetype");
   font-weight: 400;
 }
 @font-face {
-  font-family: "Avenir";
-  src: url("../../assets/Font/AvenirNextLTPro-Demi.otf") format("opentype"), url("../../assets/Font/Alternative files/AvenirNextLTProDemi.ttf") format("truetype");
+  font-family: "Dayana";
+  src: url("../../assets/fonts/AvenirNextLTPro-Demi.otf") format("opentype"), url("../../assets/fonts/Alternative files/AvenirNextLTProDemi.ttf") format("truetype");
   font-weight: 600;
 }
 @font-face {
-  font-family: "Avenir";
-  src: url("../../assets/Font/AvenirNextLTPro-Bold.otf") format("opentype"), url("../../assets/Font/Alternative files/AvenirNextLTProBold.ttf") format("truetype");
+  font-family: "Dayana";
+  src: url("../../assets/fonts/AvenirNextLTPro-Bold.otf") format("opentype"), url("../../assets/fonts/Alternative files/AvenirNextLTProBold.ttf") format("truetype");
   font-weight: 700;
 }
 * {
@@ -20,7 +20,7 @@
 }
 
 body {
-  font-family: "Avenir";
+  font-family: "Dayana";
   background-color: #ffffff;
 }
 
@@ -163,7 +163,7 @@ body {
   }
 }
 .footer > div {
-  color: #FAFAFA;
+  color: #FFFFFF;
   font-size: 0.65rem;
   letter-spacing: 0.01rem;
   padding: 3vw;
@@ -597,7 +597,7 @@ body {
 .form {
   border-bottom: 1px solid #E1E1E1;
   padding: 2vw;
-  margin: 4vw;
+  margin: 0vw 4vw;
   width: 80%;
 }
 @media (min-width: 1280px) {
@@ -615,13 +615,13 @@ body {
   font-weight: 700;
   color: #323232;
   letter-spacing: 0.1rem;
-  margin-bottom: 1vw;
+  padding: 4vw;
 }
 @media (min-width: 768px) {
   .form__heading {
     font-size: 2rem;
     font-weight: 600;
-    margin-top: 0;
+    padding: 5vw;
   }
 }
 @media (min-width: 1280px) {
@@ -809,6 +809,7 @@ body {
 .comments {
   background-color: white;
   font-size: 0.7rem;
+  margin-bottom: 2vw;
 }
 @media (min-width: 768px) {
   .comments {
